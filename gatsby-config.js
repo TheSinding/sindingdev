@@ -13,6 +13,10 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `@lekoarts/gatsby-theme-cara`,
+      options: {},
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
