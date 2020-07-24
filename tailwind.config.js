@@ -67,6 +67,7 @@ module.exports = {
           "750": "hsl(214, 17%, 32%)",
           ...defaultTheme.colors.gray,
         },
+        pletora: "#278FC5",
         terminal: {
           black: "#2B303B",
           "black-1": "#65737E",
