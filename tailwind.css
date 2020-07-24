@@ -2,6 +2,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;500;700;900&display=swap");
 
 @screen print {
   @page {
@@ -26,7 +27,11 @@
     text-shadow: 0 0 0 #fff !important;
   }
 
-  h1, h2, h3, p, li {
+  h1,
+  h2,
+  h3,
+  p,
+  li {
     color: black !important;
   }
 
@@ -41,31 +46,37 @@ html {
 
 /* For Letter size */
 
-@screen sm {
+/* @screen sm {
   html {
-    font-size: calc( 13.176471px + (16 - 13.176471) * (100vw - 640px) / (833 - 640) );
+    font-size: calc(
+      13.176471px + (16 - 13.176471) * (100vw - 640px) / (833 - 640)
+    );
   }
 }
 
 @screen md {
   html {
-    font-size: calc( 12.288px + (16 - 12.288) * (100vw - 833px) / (1079.5 - 833) );
+    font-size: calc(
+      12.288px + (16 - 12.288) * (100vw - 833px) / (1079.5 - 833)
+    );
   }
-}
+} */
 
 /* For A4 size */
 
-/* @screen sm {
+@screen sm {
   html {
-    font-size: calc( 13.176471px + (16 - 13.176471) * (100vw - 640px) / (811 - 640) );
+    font-size: calc(
+      13.176471px + (16 - 13.176471) * (100vw - 640px) / (811 - 640)
+    );
   }
 }
 
 @screen md {
   html {
-    font-size: calc( 12.288px + (16 - 12.288) * (100vw - 811px) / (1051 - 811) );
+    font-size: calc(12.288px + (16 - 12.288) * (100vw - 811px) / (1051 - 811));
   }
-} */
+}
 
 @screen lg {
   html {
@@ -73,6 +84,9 @@ html {
   }
 }
 
+.page {
+  color: #c0c5ce;
+}
 .initials-container {
   min-width: 2.31rem;
 }
@@ -82,4 +96,18 @@ body .icon-parent::before {
   width: 0px;
   visibility: hidden;
   display: inline-block;
+}
+
+.chip {
+  @apply px-2.5 mr-1.6 mb-1.6 text-base  rounded-full;
+}
+
+.text-position {
+  @apply text-terminal-green;
+}
+
+@print {
+  .chip {
+    @apply bg-white border-inset;
+  }
 }

@@ -2,73 +2,134 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Front-end and Vue Developer" />
-    <meta name="keywords" content="resume,cv,Marko Marković" />
-    <meta name="author" content="Marko Marković" />
-    <!-- <meta name="robots" content="noindex"> -->
+    <meta name="description" content="Fullstack and Vue Developer" />
+    <meta name="keywords" content="resume,cv,Simon Sinding" />
+    <meta name="author" content="Simon Sinding" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- <link rel="preload" href="./fonts/FiraGO-Regular.latin.woff2" as="font" crossorigin="anonymous"> -->
     <link href="./build.css" rel="stylesheet" />
     <title>Simon Sinding — Resume</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script
+      charset="UTF-8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/go.min.js"
+    ></script>
+
+    <script>
+      window.addEventListener("load", () => {
+        console.log("You are a nosey little one, aren't you ?")
+        console.error("Nothing exciting here!")
+      })
+    </script>
+    <script>
+      window.addEventListener("load", () => {
+        const birthday = new Date(1992, 10, 2)
+        const myAge = new Date() - birthday
+        const ageInYears = myAge / 1000 / 60 / 60 / 24 / 365
+        document.getElementById("age").innerText = Math.floor(ageInYears)
+
+        const start = new Date(2019, 1, 1)
+        const end = new Date()
+        document.getElementById(
+          "copyright-year"
+        ).innerText = `${start.getFullYear()} - ${end.getFullYear()}`
+      })
+    </script>
+    <script>
+      hljs.initHighlightingOnLoad()
+    </script>
   </head>
 
   <body>
-    <main class="font-firago hyphens-manual">
+    <main class="hyphens-manual">
       <!-- Page -->
       <div
-        class="p-6 mx-auto page max-w-2xl print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-white"
+        class="p-6 mx-auto page max-w-2xl print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16"
       >
         <!-- Name -->
-        <header class="flex items-center mb-8 md:mb-11">
-          <div
-            class="initials-container mr-5 text-base leading-none text-white bg-gray-700 font-medium print:bg-black px-3"
-            style="padding-bottom: 0.6875rem; padding-top: 0.6875rem; /*11px*/"
-          >
-            <div
-              class="initial text-center"
-              style="padding-bottom: 0.1875rem; /*3px*/"
+        <header class="grid grid-cols-2 items-center mb-8 md:mb-11">
+          <div>
+            <h2
+              class="mb-4 font-bold tracking-widest text-sm2 text-terminal-green print:font-normal"
             >
-              S
-            </div>
-            <div class="text-center initial">S</div>
+              CONTACT
+            </h2>
+            <p class="font-bold text-terminal-yellow text-2xl italic">
+              # SIMON SINDING
+            </p>
+            <p class="mt-1.5 leading-normal text-terminal-white text-md">
+              <a href="mailto: simon@sinding.dev">
+                simon@sinding.dev
+                <span
+                  class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in"
+                  >↗</span
+                >
+              </a>
+            </p>
+            <p class="mt-1.5 leading-normal text-terminal-white text-md">
+              (+45) 6070 4207
+            </p>
           </div>
-          <h1 class="text-2xl font-semibold text-gray-750 pb-px">
-            Simon Sinding
-          </h1>
+          <div>
+            <a href="//sinding.dev" class="group">
+              sinding.dev
+              <span
+                class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in"
+                >↗</span
+              >
+            </a>
+            <p class="mt-1.5 leading-normal text-terminal-white text-md">
+              <a href="//www.linkedin.com/in/simon-sinding/" class="group">
+                linkedin.com/in/simon-sinding/
+                <span
+                  class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in"
+                  >↗</span
+                >
+              </a>
+            </p>
+          </div>
         </header>
         <!-- end Name -->
 
         <!-- Column -->
         <div
-          class="md:col-count-2 print:col-count-2 col-gap-md md:h-letter-col print:h-letter-col col-fill-auto"
+          class="md:col-count-2 print:col-count-2 col-gap-md md:h-a4-col print:h-a4-col col-fill-auto"
         >
           <section class="mt-8 first:mt-0">
             <div class="break-inside-avoid">
               <img src="/statics/simon.png" class="rounded-lg pb-4" alt="" />
               <h2
-                class="mb-4 font-bold tracking-widest text-sm2 text-teal-500 print:font-normal"
+                class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
               >
-                ABOUT ME
+                # ABOUT ME
               </h2>
 
               <section class="mb-4.5 break-inside-avoid">
                 <header>
                   <h3
-                    class="text-lg font-semibold text-gray-700 leading-snugish"
+                    class="text-lg font-bold text-terminal-cyan leading-snugish"
                   >
                     Enthusiastic and ambitious person
                   </h3>
                 </header>
-                <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                  I'm a courious and outgoing 27 years old man, living in Odense
-                  with my girlfriend. I'm a "fynbo" with a capital
-                  <strong>F</strong> and love Harske Hubbi.
+
+                <p class="mt-2.1 text-md text-terminal-white leading-normal">
+                  I'm a courious and outgoing <span id="age"></span> years old
+                  man, living in Odense with my girlfriend. I'm a "fynbo" with a
+                  capital <strong>F</strong> and love Harske Hubbi.
                 </p>
-                <p class="mt-2.1 text-md text-gray-700 leading-normal">Linux enthusiast and open source contributer.</p>
-                <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                  In my daily life and my spare time, I code alot, plays Counter
-                  Strike, just like I spend time with my girlfriend & family.
+                <p class="mt-2.1 text-md text-terminal-white leading-normal">
+                  I'm a Linux enthusiast and open source contributer.
+                </p>
+                <p class="mt-2.1 text-md text-terminal-white leading-normal">
+                  In my daily life and my spare time, I code a lot, plays
+                  Counter Strike, just like I spend time with my girlfriend &
+                  family.
                 </p>
               </section>
             </div>
@@ -78,42 +139,69 @@
             <!-- To keep in the same column -->
             <div class="break-inside-avoid">
               <h2
-                class="mb-4 font-bold tracking-widest text-sm2 text-teal-500 print:font-normal"
+                class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
               >
-                EXPERIENCE
+                # EXPERIENCE
               </h2>
 
               <section class="mb-4.5 break-inside-avoid">
                 <header>
                   <h3
-                    class="text-lg font-semibold text-gray-700 leading-snugish"
+                    class="text-lg font-bold text-terminal-cyan leading-snugish"
                   >
                     Pletora
                   </h3>
-                  <p class="leading-normal text-md text-gray-650">
-                    May 2019 – Present <span class="text-teal-500 font-bold">| Master Booker and Founder</span>
+                  <p class="leading-normal text-md text-terminal-black-1">
+                    May 2019 – Present
+                    <span class="text-position font-bold"
+                      >| Master Booker and Founder</span
+                    >
                   </p>
                 </header>
-                <p class="mt-2.1 text-md text-gray-700 leading-normal">
+                <p class="mt-2.1 text-md text-terminal-white leading-normal">
                   Working as CEO / CTO of Pletora, which is a SaaS-platform
                   where we aim to create valuable insights of resources, rooms
                   and guest for SME's. Built the platform with NodeJS,
                   Typescript, Postgres and VueJS.
                 </p>
               </section>
+              <section class="mb-4.5 break-inside-avoid">
+                <header>
+                  <h3
+                    class="text-lg font-bold text-terminal-cyan leading-snugish"
+                  >
+                    Odeology
+                  </h3>
+                  <p class="leading-normal text-md text-terminal-black-1">
+                    April 2018 – Present
+                    <span class="text-position font-bold"
+                      >| Board Member & Technician</span
+                    >
+                  </p>
+                </header>
+                <p class="mt-2.1 text-md text-terminal-white leading-normal">
+                  Doing volunteer work as technician at various electron music
+                  concerts and on the board.
+                </p>
+              </section>
             </div>
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+                <h3
+                  class="text-lg font-bold text-terminal-cyan leading-snugish"
+                >
                   Coworking Plus
                 </h3>
                 <p class="leading-normal text-md text-gray-650">
-                  Oct 2015 – Aug 2020 <span class="text-teal-500 font-bold">| Network Administrator</span>
+                  Oct 2015 – Aug 2020
+                  <span class="text-position font-bold"
+                    >| Network Administrator</span
+                  >
                 </p>
               </header>
               <ul class="">
-                <li class="mt-2.1 text-md text-gray-700 leading-normal">
+                <li class="mt-2.1 text-md text-terminal-white leading-normal">
                   Designed and built the networking infrastrue of the largest
                   coworking space in Southern Denmark. The entire coworking
                   space is running on Ubiquiti Unifi. I've also installed
@@ -123,98 +211,80 @@
             </section>
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+                <h3
+                  class="text-lg font-bold text-terminal-cyan leading-snugish"
+                >
                   Ung Plus Vest
                 </h3>
                 <p class="leading-normal text-md text-gray-650">
-                  Oct 2015 – Oct 2016 <span class="text-teal-500 font-bold">| Teacher</span>
+                  Oct 2015 – Oct 2016
+                  <span class="text-position font-bold">| Teacher</span>
                 </p>
               </header>
-              <ul class="">
-                <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                  Worked as a teacher with kids in the age of 13 - 18. I taught
-                </li>
-                <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                  <span
-                    class="absolute -ml-3 sm:-ml-3.2 text-teal-500 select-none transform -translate-y-px"
-                    >›</span
-                  >
-                  Adobe After effects
-                </li>
-                <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                  <span
-                    class="absolute -ml-3 sm:-ml-3.2 text-teal-500 select-none transform -translate-y-px"
-                    >›</span
-                  >
-                  Web programming
-                </li>
-              </ul>
+              <p class="mt-2.1 text-md text-terminal-white leading-normal">
+                Worked as a teacher with kids in the age of 13 - 18. I taught
+                Adobe After effects and Web Programming
+              </p>
             </section>
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+                <h3
+                  class="text-lg font-bold text-terminal-cyan leading-snugish"
+                >
                   Blue Moose Films
                 </h3>
                 <p class="leading-normal text-md text-gray-650">
-                  Oct 2014 – Oct 2015 <span class="text-teal-500 font-bold">| Founder and graphic designer</span>
+                  Oct 2014 – Oct 2015
+                  <span class="text-position font-bold"
+                    >| Founder and graphic designer</span
+                  >
                 </p>
               </header>
-              <ul class="">
-                <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                  I worked as a founder and lead graphic designer in a
-                  advertising company with 4 guys. Some of my areas of
-                  expertise:
-                </li>
-                <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                  <span
-                    class="absolute -ml-3 sm:-ml-3.2 text-teal-500 select-none transform -translate-y-px"
-                    >›</span
-                  >
-                  Adobe Illustrator
-                </li>
-                <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                  <span
-                    class="absolute -ml-3 sm:-ml-3.2 text-teal-500 select-none transform -translate-y-px"
-                    >›</span
-                  >
-                  Adobe After effects
-                </li>
-                <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                  <span
-                    class="absolute -ml-3 sm:-ml-3.2 text-teal-500 select-none transform -translate-y-px"
-                    >›</span
-                  >
-                  Cinema 4D
-                </li>
-                <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                  <span
-                    class="absolute -ml-3 sm:-ml-3.2 text-teal-500 select-none transform -translate-y-px"
-                    >›</span
-                  >
-                  Handling clients
-                </li>
-              </ul>
+              <p class="mt-2.1 text-md text-terminal-white leading-normal">
+                I worked as a founder and lead graphic designer in a advertising
+                company with 4 guys. Some of my areas of expertise:
+              </p>
+              <div class="my-3.2 last:pb-1.5">
+                <ul
+                  class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6"
+                >
+                  <li class="chip bg-terminal-cyan text-terminal-black">
+                    Adobe Illustrator
+                  </li>
+                  <li class="chip bg-terminal-cyan text-terminal-black">
+                    Adobe After effects
+                  </li>
+                  <li class="chip bg-terminal-cyan text-terminal-black">
+                    Cinema 4D
+                  </li>
+                  <li class="chip bg-terminal-cyan text-terminal-black">
+                    Handling clients
+                  </li>
+                </ul>
+              </div>
             </section>
           </section>
 
           <section class="mt-8 first:mt-0">
-            <!-- To keep in the same column -->
             <div class="break-inside-avoid">
               <h2
-                class="mb-4 font-bold tracking-widest text-sm2 text-teal-500 print:font-normal"
+                class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
               >
-                EDUCATION
+                # EDUCATION
               </h2>
 
               <section class="mb-4.5 break-inside-avoid">
                 <header>
                   <h3
-                    class="text-lg font-semibold text-gray-700 leading-snugish"
+                    class="text-lg font-bold text-terminal-cyan leading-snugish"
                   >
                     University Of Southern Denmark
                   </h3>
                   <p class="leading-normal text-md text-gray-650">
-                    2016 – 2020 <span class="text-teal-500 font-bold">| Software Technology Engineering</span>
+                    2016 – 2020
+                    <span class="text-position font-bold"
+                      >| Software Technology Engineering</span
+                    >
                   </p>
                 </header>
               </section>
@@ -222,391 +292,183 @@
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+                <h3
+                  class="text-lg font-bold text-terminal-cyan leading-snugish"
+                >
                   Erhvervsakademiet Lillebælt
                 </h3>
                 <p class="leading-normal text-md text-gray-650">
-                  2012 – 2014 <span class="text-teal-500 font-bold">| Multimedia Design - Film and Animation</span>
+                  2012 – 2014
+                  <span class="text-position font-bold"
+                    >| Multimedia Design - Film and Animation</span
+                  >
                 </p>
               </header>
             </section>
           </section>
 
-          <!-- <section class="mt-8 first:mt-0">
-            <div class="break-inside-avoid">
-              <h2
-                class="mb-4 font-bold tracking-widest text-sm2 text-teal-500 print:font-normal"
-              >
-                PROJECTS
-              </h2>
-
-              <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3
-                    class="text-lg font-semibold text-gray-700 leading-snugish"
-                  >
-                    <a
-                      href="https://github.com/WebPraktikos/universal-resume"
-                      class="group"
-                    >
-                      Universal Resume
-                      <span
-                        class="inline-block text-teal-500 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in"
-                        >↗</span
-                      >
-                    </a>
-                  </h3>
-                  <p class="leading-normal text-md text-gray-650">
-                    Since 2019 <span class="text-teal-500 font-bold">| HTML CSS</span>
-                  </p>
-                </header>
-                <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                  Good design is as little design as possible. Less, but better
-                  — because it concentrates on the essential aspects, and the
-                  pro&shy;ducts are not burdened with non-essentials.
-                </p>
-              </section>
-            </div>
-
-            <section class="mb-4.5 break-inside-avoid">
-              <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                  <a
-                    href="https://github.com/WebPraktikos/tailwindcss-rich-docs"
-                    class="group"
-                  >
-                    tailwindcss-rich-docs
-                    <span
-                      class="inline-block text-teal-500 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in"
-                      >↗</span
-                    >
-                  </a>
-                </h3>
-                <p class="leading-normal text-md text-gray-650">
-                  2017 <span class="text-teal-500 font-bold">| JavaScript</span>
-                </p>
-              </header>
-              <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                Good design is long-lasting. It avoids being fashionable and
-                therefore never appears antiquated.
-              </p>
-              <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                Good design is honest. It does not make a product more
-                innovative, powerful or valuable than it really is.
-              </p>
-            </section>
-
-            <section class="mb-4.5 break-inside-avoid">
-              <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                  Third One
-                </h3>
-                <p class="leading-normal text-md text-gray-650">
-                  2013 – 2014 <span class="text-teal-500 font-bold">| Vue</span>
-                </p>
-              </header>
-              <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                Good design is innovative. Technological development is always
-                offering new opportunities for innovative design.
-              </p>
-            </section>
-
-            <section class="mb-4.5 break-inside-avoid">
-              <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                  Fantastic Project
-                </h3>
-                <p class="leading-normal text-md text-gray-650">
-                  2012 <span class="text-teal-500 font-bold">| JavaScript</span>
-                </p>
-              </header>
-              <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                Strip steak tail capicola alcatra ground round tenderloin ar.
-                Venison tri-tip porchetta, brisket tenderloin pig beef.
-              </p>
-            </section>
-          </section> -->
-
-          <section class="mt-8 first:mt-0">
-            <!-- To keep in the same column -->
-            <div class="break-inside-avoid">
-              <h2
-                class="mb-4 font-bold tracking-widest text-sm2 text-teal-500 print:font-normal"
-              >
-                SKILLS
-              </h2>
-
-              <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3
-                    class="text-lg font-semibold text-gray-700 leading-snugish"
-                  >
-                    JavaScript / TypeScript
-                  </h3>
-                  <p class="leading-normal text-md text-gray-650">
-                    Expert Level
-                  </p>
-                </header>
-                <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                  Good parts: pure function, higher-order functions, factory
-                  functions, composition. Bad parts: inheritance, this, new.
-                </p>
-                <div class="my-3.2 last:pb-1.5">
-                  <ul
-                    class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6"
-                  >
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      ES6
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Vue
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Functional Programming
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      NodeJS
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      FeathersJS
-                    </li>
-                  </ul>
-                </div>
-              </section>
-              <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3
-                    class="text-lg font-semibold text-gray-700 leading-snugish"
-                  >
-                    DevOps 
-                  </h3>
-                  <p class="leading-normal text-md text-gray-650">
-                    Experienced Level
-                  </p>
-                </header>
-                <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                  Worked with quite a few devops technologies like:
-                  <ul>
-                    <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                      <span
-                    class="absolute -ml-3 sm:-ml-3.2 text-teal-500 select-none transform -translate-y-px"
-                    >›</span
-                  >Kubernetes</li>
-                    <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                      <span
-                    class="absolute -ml-3 sm:-ml-3.2 text-teal-500 select-none transform -translate-y-px"
-                    >›</span
-                  >Gitlab CI/CD</li>
-                    <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                      <span
-                    class="absolute -ml-3 sm:-ml-3.2 text-teal-500 select-none transform -translate-y-px"
-                    >›</span
-                  >Docker Swarm</li>
-                    <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                      <span
-                    class="absolute -ml-3 sm:-ml-3.2 text-teal-500 select-none transform -translate-y-px"
-                    >›</span
-                  >Docker</li>
-                  </ul>
-                </p>
-                <div class="my-3.2 last:pb-1.5">
-                  <ul
-                    class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6"
-                  >
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      K8s
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Docker
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Gitlab CI/CD
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Travis
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      CI/CD
-                    </li>
-                  </ul>
-                </div>
-              </section>
-              <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3
-                    class="text-lg font-semibold text-gray-700 leading-snugish"
-                  >
-                    Linux 
-                  </h3>
-                  <p class="leading-normal text-md text-gray-650">
-                    Expert Level
-                  </p>
-                </header>
-                <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                  I've been using Arch Linux daily for almost 6 years now and have gained a lot of experience in this field.
-                  <br/>
-                  I manage many Linux servers and maintain various software.
-                </p>
-                <div class="my-3.2 last:pb-1.5">
-                  <ul
-                    class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6"
-                  >
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Nginx
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Ubuntu Server
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Arch Linux
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      PostgresQL
-                    </li>
-                  </ul>
-                </div>
-              </section>
-            </div>
-
-
-          </section>
-
+          <!-- end Column -->
         </div>
-            <section class="mt-8 first:mt-0">
-              <!-- To keep in the same column -->
-              <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                    Other
-                  </h3>
-                </header>
-                <div class="my-3.2 last:pb-1.5">
-                  <ul
-                    class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6"
-                  >
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      CSS
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Rust
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Git
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Go
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Linux Server
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      UI Design
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Photoshop
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Illustrator
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Figma
-                    </li>
-                    <li
-                      class="px-2.5 mr-1.6 mb-1.6 text-base text-teal-500 print:bg-white print:border-inset bg-teal-200 rounded-full"
-                    >
-                      Typography
-                    </li>
-                  </ul>
-                </div>
-              </section>
-              <div class="break-inside-avoid">
-                <h2
-                  class="mb-4 font-bold tracking-widest text-sm2 text-teal-500 print:font-normal"
-                >
-                  CONTACT
-                </h2>
-  
-                <section class="mb-4.5 break-inside-avoid">
-                  <ul class="list-inside pr-7">
-                    <li class="mt-1.5 leading-normal text-gray-700 text-md">
-                      <a href="//sinding.dev" class="group">
-                        sinding.dev
-                        <span
-                          class="inline-block text-teal-500 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in"
-                          >↗</span
-                        >
-                      </a>
-                    </li>
-                    <li class="mt-1.5 leading-normal text-gray-700 text-md">
-                      <a
-                        href="//www.linkedin.com/in/simon-sinding/"
-                        class="group"
-                      >
-                        linkedin.com/in/simon-sinding/
-                        <span
-                          class="inline-block text-teal-500 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in"
-                          >↗</span
-                        >
-                      </a>
-                    </li>
-                    <li class="mt-1.5 leading-normal text-gray-700 text-md">
-                      simon@sinding.dev
-                    </li>
-                    <li class="mt-1.5 leading-normal text-gray-700 text-md">
-                      (+45) 6070 4207
-                    </li>
-                  </ul>
-                </section>
-              </div>
-            </section>
-        <!-- end Column -->
       </div>
+      <div
+        class="p-6 mx-auto page max-w-2xl print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16"
+      >
+        <!-- To keep in the same column -->
+        <h2
+          class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
+        >
+          # SKILLS
+        </h2>
+
+        <section class="mb-4.5 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+              JavaScript / TypeScript
+              <span class="text-position font-bold">| Expert Level</span>
+            </h3>
+          </header>
+          <p class="mt-2.1 text-md text-terminal-white leading-normal">
+            Good parts: pure function, higher-order functions, factory
+            functions, composition. Bad parts: inheritance, this, new.
+          </p>
+          <div class="my-3.2 last:pb-1.5">
+            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                ES6
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                Vue
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                Functional Programming
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                NodeJS
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                FeathersJS
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="mb-4.5 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+              DevOps
+              <span class="text-position font-bold">
+                | Experienced Level
+              </span>
+            </h3>
+          </header>
+          <p class="mt-2.1 text-md text-terminal-white leading-normal">
+            Worked with quite a few devops technologies like:
+          </p>
+          <div class="my-3.2 last:pb-1.5">
+            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                Kubernetes
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                Docker Swarm
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                Docker
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                Gitlab CI/CD
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                Travis
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                CI/CD
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="mb-4.5 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+              Linux
+              <span class="text-position font-bold">
+                | Expert Level
+              </span>
+            </h3>
+          </header>
+          <p class="mt-2.1 text-md text-terminal-white leading-normal">
+            I've been using Arch Linux daily for almost 6 years now and have
+            gained a lot of experience in this field.
+            <br />
+            I manage many Linux servers and maintain various software.
+          </p>
+          <div class="my-3.2 last:pb-1.5">
+            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                Nginx
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                Ubuntu Server
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                Arch Linux
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                PostgresQL
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="mt-8 first:mt-0">
+          <!-- To keep in the same column -->
+          <section class="mb-4.5 break-inside-avoid">
+            <header>
+              <h3
+                class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
+              >
+                # OTHER
+              </h3>
+            </header>
+            <div class="my-3.2 last:pb-1.5">
+              <ul
+                class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6"
+              >
+                <li class="chip bg-terminal-cyan text-terminal-black">
+                  CSS
+                </li>
+                <li class="chip bg-terminal-cyan text-terminal-black">
+                  Rust
+                </li>
+                <li class="chip bg-terminal-cyan text-terminal-black">
+                  Git
+                </li>
+                <li class="chip bg-terminal-cyan text-terminal-black">
+                  Go
+                </li>
+                <li class="chip bg-terminal-cyan text-terminal-black">
+                  Linux Server
+                </li>
+                <li class="chip bg-terminal-cyan text-terminal-black">
+                  UI Design
+                </li>
+                <li class="chip bg-terminal-cyan text-terminal-black">
+                  Photoshop
+                </li>
+                <li class="chip bg-terminal-cyan text-terminal-black">
+                  Illustrator
+                </li>
+                <li class="chip bg-terminal-cyan text-terminal-black">
+                  Figma
+                </li>
+                <li class="chip bg-terminal-cyan text-terminal-black">
+                  Typography
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <p>© Copyright <span id="copyright-year"></span> - Simon Sinding</p>
+      </div>
+
       <!-- end Page -->
     </main>
   </body>

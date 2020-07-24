@@ -1,30 +1,30 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-const plugin = require("tailwindcss/plugin");
+const defaultTheme = require("tailwindcss/defaultTheme")
+const plugin = require("tailwindcss/plugin")
 
 module.exports = {
   theme: {
     /* For Letter size */
-    screens: {
-      print: {"raw": "print"},
-      xsm: "500px",
-      sm: "640px",
-      md: "833px",
-      lg: "1079.5px",
-      xl: "1280px",
-    },
-    /* For A4 size */
     // screens: {
-    //   screen: {"raw": "screen"},
-    //   print: {"raw": "print"},
+    //   print: { raw: "print" },
     //   xsm: "500px",
     //   sm: "640px",
-    //   md: "811px",
-    //   lg: "1051px",
+    //   md: "833px",
+    //   lg: "1079.5px",
     //   xl: "1280px",
     // },
+    /* For A4 size */
+    screens: {
+      screen: { raw: "screen" },
+      print: { raw: "print" },
+      xsm: "500px",
+      sm: "640px",
+      md: "811px",
+      lg: "1051px",
+      xl: "1280px",
+    },
     extend: {
       fontFamily: {
-        "firago": ["FiraGO", ...defaultTheme.fontFamily.sans],
+        firago: ["FiraGO", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         sm2: "0.9375rem", // 15px label
@@ -37,14 +37,14 @@ module.exports = {
         normal: "1.34",
       },
       maxWidth: {
-        "letter": "66.40625rem",
-        "a4": "64.609375rem"
+        letter: "66.40625rem",
+        a4: "64.609375rem",
       },
       height: {
-        "letter": "85.9375rem",
+        letter: "85.9375rem",
         "letter-col": "71.625rem",
         "letter-col-full": "77.9375rem",
-        "a4": "91.350883rem",
+        a4: "91.350883rem",
         "a4-col": "77.038383rem",
         "a4-col-full": "83.350883rem",
       },
@@ -65,15 +65,29 @@ module.exports = {
           "550": "hsl(218, 20%, 63%)",
           "650": "hsl(216, 15%, 48%)",
           "750": "hsl(214, 17%, 32%)",
-          ...defaultTheme.colors.gray
+          ...defaultTheme.colors.gray,
         },
-        link: "#fbf3f3"
+        terminal: {
+          black: "#2B303B",
+          "black-1": "#65737E",
+          white: "#C0C5CE",
+          "white-2": "#EFF1F5",
+          red: "#BF616A",
+          green: "#A3BE8C",
+          "green-200": "#D5E2CB",
+          "green-400": "#C1D3B1",
+          yellow: "#EBCB8B",
+          blue: "#8FA1B3",
+          magenta: "#B48EAD",
+          cyan: "#96B5B4",
+        },
+        link: "#fbf3f3",
       },
     },
   },
 
   variants: {
-    textColor: ["responsive", 'hover', 'focus', 'group-hover'],
+    textColor: ["responsive", "hover", "focus", "group-hover"],
     margin: ["responsive", "last", "first"],
     padding: ["responsive", "last"],
   },
@@ -81,10 +95,12 @@ module.exports = {
   plugins: [
     plugin(function ({ addBase, addUtilities, theme }) {
       addBase({
-        "body": {
+        body: {
           "-webkit-font-smoothing": "subpixel-antialiased",
+          "background-color": "rgb(43, 48, 59)",
+          "font-family": "Source Code Pro",
         },
-      });
+      })
 
       /**
        * Typography Utilities
@@ -150,7 +166,7 @@ module.exports = {
           "font-feature-settings": "'case' on",
         },
         ".hyphens-manual": {
-          "hyphens": "manual",
+          hyphens: "manual",
         },
       }
 
@@ -164,7 +180,7 @@ module.exports = {
       const projectSpecificUtils = {
         ".border-inset": {
           "box-shadow": `inset 0 0 0 1px ${theme("colors.gray.400")}`,
-        }
+        },
       }
 
       addUtilities(projectSpecificUtils, {
@@ -211,6 +227,5 @@ module.exports = {
         variants: ["responsive"],
       })
     }),
-
-  ]
-};
+  ],
+}
