@@ -2,6 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 const plugin = require("tailwindcss/plugin")
 
 module.exports = {
+  purge: { enabled: true, content: ["./docs/**/*.html"] },
   theme: {
     /* For Letter size */
     // screens: {

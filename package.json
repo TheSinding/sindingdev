@@ -14,7 +14,7 @@
   "author": "WebPraktikos <hi@webpraktikos.com>",
   "scripts": {
     "serve": "concurrently \"postcss ./tailwind.css -o docs/build.css --watch\"  \"live-server ./docs \"",
-    "build": "cross-env NODE_ENV=build postcss ./tailwind.css -o ./docs/build.css"
+    "build": "cross-env NODE_ENV=production postcss ./tailwind.css -o ./docs/build.css"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.0.6",
