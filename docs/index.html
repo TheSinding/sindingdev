@@ -15,17 +15,22 @@
     />
     <!-- Matomo -->
     <script type="text/javascript">
-      var _paq = window._paq = window._paq || [];
+      var _paq = (window._paq = window._paq || [])
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="//80.208.0.10:45566/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        _paq.push(['setSiteId', '1']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-      })();
+      _paq.push(["trackPageView"])
+      _paq.push(["enableLinkTracking"])
+      ;(function () {
+        var u = "//matomo.sinding.dev/"
+        _paq.push(["setTrackerUrl", u + "matomo.php"])
+        _paq.push(["setSiteId", "1"])
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0]
+        g.type = "text/javascript"
+        g.async = true
+        g.src = u + "matomo.js"
+        s.parentNode.insertBefore(g, s)
+      })()
     </script>
     <!-- End Matomo Code -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
@@ -124,7 +129,7 @@
                 # ABOUT ME
               </h2>
 
-              <section class="mb-4.5 break-inside-avoid">
+              <section class="mb-4.5">
                 <header>
                   <h3
                     class="text-lg font-bold text-terminal-cyan leading-snugish"
@@ -176,7 +181,7 @@
                   In my daily life and my spare time, I code a lot, plays
                   Counter Strike, just like I spend time with my girlfriend &
                   family. <br />
-                  I'm on the board a local non-profit organization called
+                  I'm on the board of a local non-profit organization called
                   <a
                     class="hover:text-terminal-yellow text-terminal-cyan font-bold"
                     href="https://www.facebook.com/Odeologyodense/"
@@ -215,10 +220,9 @@
                   </p>
                 </header>
                 <p class="mt-2.1 text-md text-terminal-white leading-normal">
-                  Working as CEO / CTO of Pletora, which is a SaaS-platform
-                  where we aim to create valuable insights of resources, rooms
-                  and guest for SME's. Built the platform with NodeJS,
-                  Typescript, Postgres and VueJS.
+                  Working as CEO / CTO of Pletora, which is a SaaS-platform. I
+                  built the platform with NodeJS, Typescript, Postgres and
+                  VueJS.
                 </p>
               </section>
               <section class="mb-4.5 break-inside-avoid">
@@ -231,13 +235,13 @@
                   <p class="leading-normal text-md text-terminal-black-1">
                     April 2018 – Present
                     <span class="text-position font-bold"
-                      >| Board Member & Technician</span
+                      >| Board Member & Light Technician</span
                     >
                   </p>
                 </header>
                 <p class="mt-2.1 text-md text-terminal-white leading-normal">
-                  Doing volunteer work as technician at various electron music
-                  concerts and on the board.
+                  Doing volunteer work as lighting technician at various
+                  electron music concerts and on the board.
                 </p>
               </section>
             </div>
@@ -260,8 +264,7 @@
                 <li class="mt-2.1 text-md text-terminal-white leading-normal">
                   Designed and built the networking infrasture of the largest
                   coworking space in Southern Denmark. The entire coworking
-                  space is running on Ubiquiti Unifi. I've also installed
-                  Ubiquiti Unifi Security cameras.
+                  space is running on Ubiquiti Unifi.
                 </li>
               </ul>
             </section>
