@@ -42,16 +42,23 @@
 
     <script>
       window.addEventListener("load", () => {
-        console.log("You are a nosey little one, aren't you ?")
+        console.log("%cYou are a nosey little one, aren't you ?", "font-size: 20px")
         console.error("Nothing exciting here!")
       })
     </script>
     <script>
       window.addEventListener("load", () => {
+        const getTimeInYears = (date) =>  date / 1000 / 60 / 60 / 24 / 365
         const birthday = new Date(1992, 10, 2)
         const myAge = new Date() - birthday
-        const ageInYears = myAge / 1000 / 60 / 60 / 24 / 365
+        const ageInYears = getTimeInYears(myAge)
+        const calvinAge = getTimeInYears(new Date() - new Date(2020, 12, 20))
+        const workingAge = getTimeInYears(new Date() - new Date(2017,1,1))
+
+
         document.getElementById("age").innerText = Math.floor(ageInYears)
+        document.getElementById("calvin-age").innerText = Math.floor(calvinAge)
+        document.getElementById("working-age").innerText = Math.floor(workingAge)
 
         const start = new Date(2019, 1, 1)
         const end = new Date()
@@ -78,7 +85,7 @@
               # SIMON SINDING
             </p>
             <p
-              class="mt-1.5 leading-normal text-md hover:text-terminal-yellow text-terminal-cyan font-bold"
+              class="mt-1.5 leading-normal text-md main-link"
             >
               <a href="mailto: simon@sinding.dev">
                 simon@sinding.dev
@@ -93,9 +100,7 @@
             </p>
           </div>
           <div>
-            <p
-              class="mt-1.5 leading-normal text-md hover:text-terminal-yellow text-terminal-cyan font-bold"
-            >
+            <p class="mt-1.5 leading-normal text-md main-link">
               <a href="//sinding.dev" class="">
                 sinding.dev
                 <span
@@ -105,9 +110,7 @@
               </a>
             </p>
 
-            <p
-              class="mt-1.5 leading-normal text-md hover:text-terminal-yellow text-terminal-cyan font-bold"
-            >
+            <p class="mt-1.5 leading-normal text-md main-link">
               <a href="//www.linkedin.com/in/simon-sinding/" class="group">
                 linkedin.com/in/simon-sinding/
                 <span
@@ -116,9 +119,7 @@
                 >
               </a>
             </p>
-            <p
-              class="mt-1.5 leading-normal text-md hover:text-terminal-yellow text-terminal-cyan font-bold"
-            >
+            <p class="mt-1.5 leading-normal text-md main-link">
               <a href="https://github.com/TheSinding"
                 >github.com/TheSinding
                 <span
@@ -153,56 +154,42 @@
                   </h3>
                 </header>
 
-                <p class="mt-2.1 text-md text-terminal-white leading-normal">
+                <p class="mt-2.1 ">
                   I'm a courious and outgoing <span id="age"></span> years old,
-                  proudly living in Odense with my girlfriend. I'm a "fynbo"
+                  proudly living in <a 
+                    href="https://da.wikipedia.org/wiki/Svendborg"
+                    class="main-link"
+                    target="_blank"
+                    >Svendborg</a> with my girlfriend and my <span id="calvin-age"></span> year old son, Calvin. I'm a "fynbo"
                   with a capital
                   <strong class="text-terminal-cyan">F</strong> and love
                   <a
                     href="https://www.harskehubbi.com/"
-                    class="hover:text-terminal-yellow text-terminal-cyan font-bold"
+                    class="main-link"
+                    target="_blank"
                     >Harske Hubbi</a
                   >.
                 </p>
-                <p class="mt-8 text-md text-terminal-white leading-normal">
+                <p class="mt-8 ">
                   I'm a Linux enthusiast and open source contributer. <br />
-                  I've worked with fullstack development for the last 3 years,
+                  I've worked with fullstack development for the last <span id="working-age"></span> years,
                   utilizing NodeJS, Typescript, VueJS, FeathersJS, React,
                   Laravel, Postgres, MongoDB and more, throughout the years.
                 </p>
-                <p class="mt-8 text-md text-terminal-white leading-normal">
-                  In 2019 I founded a SaaS platform called
-                  <a
-                    href="https://pletora.io"
-                    class="font-bold hover:text-terminal-yellow text-pletora"
-                    >Pletora</a
-                  >. <br />
+                <p class="mt-8">
+                  Currently employed at <a href="https://danfoss.com" class="text-danfoss text-bold hover:text-terminal-yellow">Danfoss</a>, one of Denmark leading companies and world leading in sustainable solutions.
+                  <br/>
+                  With colleagues in China, Slovenia, Poland and Denmark, I've learned a lot about how to work remotely with other cultures, effectively communicate and team working skills.
                 </p>
-                <p class="mt-2.1 text-md text-terminal-white leading-normal">
-                  Working as the CEO / CTO of Pletora I've learned a lot about
-                  the startup-industry. Mainly how to approach the SME market
-                  and how essential customer feedback is when you develop new
-                  software. <br />
-                  While simultaneously working as the Product Owner, Scrum
-                  Master and more.
-                </p>
-
-                <p class="mt-2.1 text-md text-terminal-white leading-normal">
-                  I've managed 1 developer and 2 designers and it taught me a
-                  lot about management, like how to talk with team members, how
-                  to plan a software roadmap and more.
-                </p>
-                <p class="mt-8 text-md text-terminal-white leading-normal">
+                <p class="mt-8 ">
                   In my daily life and my spare time, I code a lot, plays
                   Counter Strike, just like I spend time with my girlfriend &
                   family. <br />
                   I'm on the board of a local non-profit organization called
                   <a
-                    class="hover:text-terminal-yellow text-terminal-cyan font-bold"
+                    class="main-link"
                     href="https://www.facebook.com/Odeologyodense/"
-                  >
-                    Odeology</a
-                  >
+                  >Odeology</a>
                   where I occationally in the weekends work as a lighting
                   technician at various electronic and techno music concerts and
                   festivals.
@@ -219,7 +206,31 @@
               >
                 # EXPERIENCE
               </h2>
-
+              <section class="mb-4.5 break-inside-avoid">
+                <header>
+                  <h3
+                    class="text-lg font-bold text-terminal-cyan leading-snugish"
+                  >
+                    Danfoss
+                  </h3>
+                  <p class="leading-normal text-md text-terminal-black-1">
+                    October 2020 - Present
+                    <span class="text-position font-bold"
+                      >| Software Engineer</span
+                    >
+                  </p>
+                </header>
+                <p class="mt-2.1 ">
+                  Creating software helping the green transition with district heating.
+                  <br/>
+                  Working in the <a 
+                  href="https://www.danfoss.com/en/products/dhs/software-solutions/danfoss-leanheat-software-suite-services/leanheat-monitor/"
+                  class="main-link"
+                  target="_blank"
+                  >Leanheat Monitor</a> team.
+                  Utializing with technologies like React, NodeJS, K8s, Terraform, MongoDB and more.
+                </p>
+              </section>
               <section class="mb-4.5 break-inside-avoid">
                 <header>
                   <h3
@@ -228,14 +239,23 @@
                     Pletora
                   </h3>
                   <p class="leading-normal text-md text-terminal-black-1">
-                    May 2019 – Present
+                    May 2019 - October 2021
                     <span class="text-position font-bold"
                       >| Master Booker and Founder</span
                     >
                   </p>
                 </header>
-                <p class="mt-2.1 text-md text-terminal-white leading-normal">
-                  Working as CEO / CTO of Pletora, which is a SaaS-platform. I
+                I've learned a lot about
+                  the startup-industry. Mainly how to approach the SME market
+                  and how essential customer feedback is when you develop new
+                  software. <br />
+
+                <p class="mt-2.1 ">
+                  Worked as CEO / CTO of <a
+                    href="https://pletora.io"
+                    class="font-bold hover:text-terminal-yellow text-pletora"
+                    >Pletora</a
+                  >, which is a SaaS-platform. I
                   built the platform with NodeJS, Typescript, Postgres and
                   VueJS.
                 </p>
@@ -254,7 +274,7 @@
                     >
                   </p>
                 </header>
-                <p class="mt-2.1 text-md text-terminal-white leading-normal">
+                <p class="mt-2.1 ">
                   Doing volunteer work as a lighting technician at various
                   electron music concerts and on the board.
                 </p>
@@ -276,7 +296,7 @@
                 </p>
               </header>
               <ul class="">
-                <li class="mt-2.1 text-md text-terminal-white leading-normal">
+                <li class="mt-2.1 ">
                   Designed and built the networking infrasture of the largest
                   coworking space in Southern Denmark. The entire coworking
                   space is running on Ubiquiti Unifi.
@@ -295,7 +315,7 @@
                   <span class="text-position font-bold">| Teacher</span>
                 </p>
               </header>
-              <p class="mt-2.1 text-md text-terminal-white leading-normal">
+              <p class="mt-2.1 ">
                 Worked as a teacher with kids in the age of 13 - 18. I taught
                 Adobe After effects and Web Programming
               </p>
@@ -314,7 +334,7 @@
                   >
                 </p>
               </header>
-              <p class="mt-2.1 text-md text-terminal-white leading-normal">
+              <p class="mt-2.1 ">
                 I worked as a founder and lead graphic designer in a advertising
                 company with 4 guys. Some of my areas of expertise:
               </p>
@@ -359,13 +379,13 @@
               <span class="text-position font-bold">| Expert Level</span>
             </h3>
           </header>
-          <p class="mt-2.1 text-md text-terminal-white leading-normal">
+          <p class="mt-2.1 ">
             I have worked with Javascript for the last 4 years and have
             developed a deep knowledge regarding the langauge. <br />
             I have contributed to various open source projects. Mainly the
             <a
               href="https://feathersjs.com/"
-              class="hover:text-terminal-yellow text-terminal-cyan font-bold"
+              class="main-link"
               >FeathersJS</a
             >
             project.
@@ -374,7 +394,7 @@
             bugs and I'm a contributer on the
             <a
               href="https://github.com/feathers-plus/feathers-authentication-management"
-              class="hover:text-terminal-yellow text-terminal-cyan font-bold"
+              class="main-link"
               >Feathers Authentication Manament</a
             >
             project
@@ -423,7 +443,7 @@
               </span>
             </h3>
           </header>
-          <p class="mt-2.1 text-md text-terminal-white leading-normal">
+          <p class="mt-2.1 ">
             In my time building Pletora's code base, I've used quite a few
             DevOps technologies.
             <br />
@@ -477,7 +497,7 @@
               </span>
             </h3>
           </header>
-          <p class="mt-2.1 text-md text-terminal-white leading-normal">
+          <p class="mt-2.1 ">
             I've been using Arch Linux daily for almost 6 years now and have
             gained a lot of experience in this field.
             <br />
@@ -509,7 +529,7 @@
               </span>
             </h3>
           </header>
-          <p class="mt-2.1 text-md text-terminal-white leading-normal">
+          <p class="mt-2.1 ">
             I've gained a lot of knowledge while using Kubernetes to deploy
             Pletora, including how to create scalable deployments, Ingress,
             certificate management and more.
@@ -543,7 +563,7 @@
               </span>
             </h3>
           </header>
-          <p class="mt-2.1 text-md text-terminal-white leading-normal">
+          <p class="mt-2.1 ">
             I've used Java in almost all my courses at SDU and have build a
             couple of simple Android apps.
           </p>
@@ -573,7 +593,7 @@
               </span>
             </h3>
           </header>
-          <p class="mt-2.1 text-md text-terminal-white leading-normal">
+          <p class="mt-2.1 ">
             I enjoy making embedded programming as a hobby and love to use the
             ESP32, TI Lauchpad, Arduino and more. <br />
             Here I mainly use the PlatformIO and either C++ or Rust as the
@@ -611,7 +631,7 @@
               </span>
             </h3>
           </header>
-          <p class="mt-2.1 text-md text-terminal-white leading-normal">
+          <p class="mt-2.1 ">
             In my time at Coworking Plus I planned and built a networking
             infrasture, currently supporting around 350 people. <br />
             I gained a lot of knowledge regarding VLANs, WIFI coverage, network

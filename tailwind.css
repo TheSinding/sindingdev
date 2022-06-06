@@ -65,9 +65,7 @@ html {
 
 @screen sm {
   html {
-    font-size: calc(
-      13.176471px + (16 - 13.176471) * (100vw - 640px) / (811 - 640)
-    );
+    font-size: calc(13.176471px + (16 - 13.176471) * (100vw - 640px) / (811 - 640));
   }
 }
 
@@ -86,6 +84,7 @@ html {
 .page {
   color: #c0c5ce;
 }
+
 .initials-container {
   min-width: 2.31rem;
 }
@@ -98,7 +97,7 @@ body .icon-parent::before {
 }
 
 .chip {
-  @apply px-2.5 mr-1.6 mb-1.6 text-base  rounded-full;
+  @apply px-2.5 mr-1.6 mb-1.6 text-base rounded-full;
 }
 
 .text-position {
@@ -109,4 +108,16 @@ body .icon-parent::before {
   .chip {
     @apply bg-white border-inset;
   }
+}
+
+p {
+  @apply text-md text-terminal-white leading-normal;
+}
+
+.main-link {
+  @apply text-terminal-cyan font-bold;
+}
+
+.main-link:hover {
+  @apply text-terminal-yellow
 }

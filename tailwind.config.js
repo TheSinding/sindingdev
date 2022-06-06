@@ -69,6 +69,7 @@ module.exports = {
           ...defaultTheme.colors.gray,
         },
         pletora: "#278FC5",
+        danfoss: "#E2000F",
         terminal: {
           black: "#2B303B",
           "black-1": "#65737E",
