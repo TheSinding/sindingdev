@@ -42,23 +42,27 @@
 
     <script>
       window.addEventListener("load", () => {
-        console.log("%cYou are a nosey little one, aren't you ?", "font-size: 20px")
+        console.log(
+          "%cYou are a nosey little one, aren't you ?",
+          "font-size: 20px"
+        )
         console.error("Nothing exciting here!")
       })
     </script>
     <script>
       window.addEventListener("load", () => {
-        const getTimeInYears = (date) =>  date / 1000 / 60 / 60 / 24 / 365
+        const getTimeInYears = (date) => date / 1000 / 60 / 60 / 24 / 365
         const birthday = new Date(1992, 10, 2)
         const myAge = new Date() - birthday
         const ageInYears = getTimeInYears(myAge)
         const calvinAge = getTimeInYears(new Date() - new Date(2020, 12, 20))
-        const workingAge = getTimeInYears(new Date() - new Date(2017,1,1))
-
+        const workingAge = getTimeInYears(new Date() - new Date(2017, 1, 1))
 
         document.getElementById("age").innerText = Math.floor(ageInYears)
         document.getElementById("calvin-age").innerText = Math.floor(calvinAge)
-        document.getElementById("working-age").innerText = Math.floor(workingAge)
+        document.getElementById("working-age").innerText =
+          Math.floor(workingAge)
+        document.getElementById("js-age").innerText = Math.floor(workingAge)
 
         const start = new Date(2019, 1, 1)
         const end = new Date()
@@ -84,15 +88,14 @@
             <p class="font-bold text-terminal-yellow text-2xl italic">
               # SIMON SINDING
             </p>
-            <p
-              class="mt-1.5 leading-normal text-md main-link"
-            >
+            <p class="mt-1.5 leading-normal text-md main-link">
               <a href="mailto: simon@sinding.dev">
                 simon@sinding.dev
                 <span
                   class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in"
-                  >↗</span
                 >
+                  ↗
+                </span>
               </a>
             </p>
             <p class="mt-1.5 leading-normal text-terminal-white text-md">
@@ -105,8 +108,9 @@
                 sinding.dev
                 <span
                   class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in"
-                  >↗</span
                 >
+                  ↗
+                </span>
               </a>
             </p>
 
@@ -115,18 +119,20 @@
                 linkedin.com/in/simon-sinding/
                 <span
                   class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in"
-                  >↗</span
                 >
+                  ↗
+                </span>
               </a>
             </p>
             <p class="mt-1.5 leading-normal text-md main-link">
-              <a href="https://github.com/TheSinding"
-                >github.com/TheSinding
+              <a href="https://github.com/TheSinding">
+                github.com/TheSinding
                 <span
                   class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in"
-                  >↗</span
-                ></a
-              >
+                >
+                  ↗
+                </span>
+              </a>
             </p>
           </div>
         </header>
@@ -154,42 +160,66 @@
                   </h3>
                 </header>
 
-                <p class="mt-2.1 ">
-                  I'm a courious and outgoing <span id="age"></span> years old,
-                  proudly living in <a 
+                <p class="mt-2.1">
+                  I'm a courious and outgoing
+                  <span id="age"></span>
+                  years old, proudly living in
+                  <a
                     href="https://da.wikipedia.org/wiki/Svendborg"
                     class="main-link"
                     target="_blank"
-                    >Svendborg</a> with my girlfriend and my <span id="calvin-age"></span> year old son, Calvin. I'm a "fynbo"
-                  with a capital
-                  <strong class="text-terminal-cyan">F</strong> and love
+                  >
+                    Svendborg
+                  </a>
+                  with my girlfriend and my
+                  <span id="calvin-age"></span>
+                  year old son, Calvin. I'm a "fynbo" with a capital
+                  <strong class="text-terminal-cyan">F</strong>
+                  and love
                   <a
                     href="https://www.harskehubbi.com/"
                     class="main-link"
                     target="_blank"
-                    >Harske Hubbi</a
-                  >.
+                  >
+                    Harske Hubbi
+                  </a>
+                  .
                 </p>
-                <p class="mt-8 ">
-                  I'm a Linux enthusiast and open source contributer. <br />
-                  I've worked with fullstack development for the last <span id="working-age"></span> years,
-                  utilizing NodeJS, Typescript, VueJS, FeathersJS, React,
+                <p class="mt-8">
+                  I'm a Linux enthusiast and open source contributer.
+                  <br />
+                  I've worked with fullstack development for the last
+                  <span id="working-age"></span>
+                  years, utilizing NodeJS, Typescript, VueJS, FeathersJS, React,
                   Laravel, Postgres, MongoDB and more, throughout the years.
                 </p>
                 <p class="mt-8">
-                  Currently employed at <a href="https://danfoss.com" class="text-danfoss text-bold hover:text-terminal-yellow">Danfoss</a>, one of Denmark leading companies and world leading in sustainable solutions.
-                  <br/>
-                  With colleagues in China, Slovenia, Poland and Denmark, I've learned a lot about how to work remotely with other cultures, effectively communicate and team working skills.
+                  Currently employed at
+                  <a
+                    href="https://danfoss.com"
+                    class="text-danfoss text-bold hover:text-terminal-yellow"
+                  >
+                    Danfoss
+                  </a>
+                  , one of Denmark leading companies and world leading in
+                  sustainable solutions.
+                  <br />
+                  With colleagues in China, Slovenia, Poland and Denmark, I've
+                  learned about how to work remotely with other cultures,
+                  effectively communicate and team working skills.
                 </p>
-                <p class="mt-8 ">
-                  In my daily life and my spare time, I code a lot, plays
-                  Counter Strike, just like I spend time with my girlfriend &
-                  family. <br />
+                <p class="mt-8">
+                  In my daily life and my spare time, I code small projects,
+                  plays Counter Strike, just like I spend time with my
+                  girlfriend & family.
+                  <br />
                   I'm on the board of a local non-profit organization called
                   <a
                     class="main-link"
                     href="https://www.facebook.com/Odeologyodense/"
-                  >Odeology</a>
+                  >
+                    Odeology
+                  </a>
                   where I occationally in the weekends work as a lighting
                   technician at various electronic and techno music concerts and
                   festivals.
@@ -215,20 +245,25 @@
                   </h3>
                   <p class="leading-normal text-md text-terminal-black-1">
                     October 2020 - Present
-                    <span class="text-position font-bold"
-                      >| Software Engineer</span
-                    >
+                    <span class="text-position font-bold">
+                      | Software Engineer
+                    </span>
                   </p>
                 </header>
-                <p class="mt-2.1 ">
-                  Creating software helping the green transition with district heating.
-                  <br/>
-                  Working in the <a 
-                  href="https://www.danfoss.com/en/products/dhs/software-solutions/danfoss-leanheat-software-suite-services/leanheat-monitor/"
-                  class="main-link"
-                  target="_blank"
-                  >Leanheat Monitor</a> team.
-                  Utializing with technologies like React, NodeJS, K8s, Terraform, MongoDB and more.
+                <p class="mt-2.1">
+                  Creating software helping the green transition with district
+                  heating.
+                  <br />
+                  Working in the
+                  <a
+                    href="https://www.danfoss.com/en/products/dhs/software-solutions/danfoss-leanheat-software-suite-services/leanheat-monitor/"
+                    class="main-link"
+                    target="_blank"
+                  >
+                    Leanheat Monitor
+                  </a>
+                  team. Utializing technologies like React, NodeJS, K8s,
+                  Terraform, MongoDB and more.
                 </p>
               </section>
               <section class="mb-4.5 break-inside-avoid">
@@ -240,24 +275,26 @@
                   </h3>
                   <p class="leading-normal text-md text-terminal-black-1">
                     May 2019 - October 2021
-                    <span class="text-position font-bold"
-                      >| Master Booker and Founder</span
-                    >
+                    <span class="text-position font-bold">
+                      | Master Booker and Founder
+                    </span>
                   </p>
                 </header>
-                I've learned a lot about
-                  the startup-industry. Mainly how to approach the SME market
-                  and how essential customer feedback is when you develop new
-                  software. <br />
+                I've learned a lot about the startup-industry. Mainly how to
+                approach the SME market and how essential customer feedback is
+                when you develop new software.
+                <br />
 
-                <p class="mt-2.1 ">
-                  Worked as CEO / CTO of <a
+                <p class="mt-2.1">
+                  Worked as CEO / CTO of
+                  <a
                     href="https://pletora.io"
                     class="font-bold hover:text-terminal-yellow text-pletora"
-                    >Pletora</a
-                  >, which is a SaaS-platform. I
-                  built the platform with NodeJS, Typescript, Postgres and
-                  VueJS.
+                  >
+                    Pletora
+                  </a>
+                  , which is a SaaS-platform. I built the platform with NodeJS,
+                  Typescript, Postgres and VueJS.
                 </p>
               </section>
               <section class="mb-4.5 break-inside-avoid">
@@ -268,13 +305,13 @@
                     Odeology
                   </h3>
                   <p class="leading-normal text-md text-terminal-black-1">
-                    April 2018 – Present
-                    <span class="text-position font-bold"
-                      >| Board Member & Light Technician</span
-                    >
+                    April 2018 - Present
+                    <span class="text-position font-bold">
+                      | Board Member & Light Technician
+                    </span>
                   </p>
                 </header>
-                <p class="mt-2.1 ">
+                <p class="mt-2.1">
                   Doing volunteer work as a lighting technician at various
                   electron music concerts and on the board.
                 </p>
@@ -290,13 +327,13 @@
                 </h3>
                 <p class="leading-normal text-md text-gray-650">
                   Oct 2015 – Aug 2020
-                  <span class="text-position font-bold"
-                    >| Network Administrator</span
-                  >
+                  <span class="text-position font-bold">
+                    | Network Administrator
+                  </span>
                 </p>
               </header>
               <ul class="">
-                <li class="mt-2.1 ">
+                <li class="mt-2.1">
                   Designed and built the networking infrasture of the largest
                   coworking space in Southern Denmark. The entire coworking
                   space is running on Ubiquiti Unifi.
@@ -315,7 +352,7 @@
                   <span class="text-position font-bold">| Teacher</span>
                 </p>
               </header>
-              <p class="mt-2.1 ">
+              <p class="mt-2.1">
                 Worked as a teacher with kids in the age of 13 - 18. I taught
                 Adobe After effects and Web Programming
               </p>
@@ -328,13 +365,13 @@
                   Blue Moose Films
                 </h3>
                 <p class="leading-normal text-md text-gray-650">
-                  Oct 2014 – Oct 2015
-                  <span class="text-position font-bold"
-                    >| Founder and graphic designer</span
-                  >
+                  Oct 2014 - Oct 2015
+                  <span class="text-position font-bold">
+                    | Founder and graphic designer
+                  </span>
                 </p>
               </header>
-              <p class="mt-2.1 ">
+              <p class="mt-2.1">
                 I worked as a founder and lead graphic designer in a advertising
                 company with 4 guys. Some of my areas of expertise:
               </p>
@@ -379,15 +416,13 @@
               <span class="text-position font-bold">| Expert Level</span>
             </h3>
           </header>
-          <p class="mt-2.1 ">
-            I have worked with Javascript for the last 4 years and have
-            developed a deep knowledge regarding the langauge. <br />
+          <p class="mt-2.1">
+            I have worked with Javascript and Typescript for the last
+            <span id="js-age"></span>
+            years and have developed a deep knowledge regarding the langauges.
+            <br />
             I have contributed to various open source projects. Mainly the
-            <a
-              href="https://feathersjs.com/"
-              class="main-link"
-              >FeathersJS</a
-            >
+            <a href="https://feathersjs.com/" class="main-link">FeathersJS</a>
             project.
             <br />
             I have made various authentication plugins and helped fix various
@@ -395,42 +430,27 @@
             <a
               href="https://github.com/feathers-plus/feathers-authentication-management"
               class="main-link"
-              >Feathers Authentication Manament</a
             >
+              Feathers Authentication Manament
+            </a>
             project
           </p>
           <div class="my-3.2 last:pb-1.5">
             <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                ES6
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                React
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Redux
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Vuex
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Vue
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                NestJS
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">ES6</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">React</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Redux</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Vuex</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Vue</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">NestJS</li>
               <li class="chip bg-terminal-cyan text-terminal-black">
                 Functional Programming
               </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                NodeJS
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">NodeJS</li>
               <li class="chip bg-terminal-cyan text-terminal-black">
                 FeathersJS
               </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Stripe
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Stripe</li>
             </ul>
           </div>
         </section>
@@ -438,12 +458,10 @@
           <header>
             <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
               DevOps
-              <span class="text-position font-bold">
-                | Advanced Level
-              </span>
+              <span class="text-position font-bold">| Advanced Level</span>
             </h3>
           </header>
-          <p class="mt-2.1 ">
+          <p class="mt-2.1">
             In my time building Pletora's code base, I've used quite a few
             DevOps technologies.
             <br />
@@ -461,27 +479,17 @@
               <li class="chip bg-terminal-cyan text-terminal-black">
                 Docker Swarm
               </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Docker
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Docker</li>
               <li class="chip bg-terminal-cyan text-terminal-black">
                 Gitlab CI/CD
               </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Travis
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                CI/CD
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Travis</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">CI/CD</li>
               <li class="chip bg-terminal-cyan text-terminal-black">
                 Digital Ocean
               </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Git
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Sentry
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Git</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Sentry</li>
               <li class="chip bg-terminal-cyan text-terminal-black">
                 Gitlab Container Registry
               </li>
@@ -492,12 +500,10 @@
           <header>
             <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
               Linux
-              <span class="text-position font-bold">
-                | Advanced Level
-              </span>
+              <span class="text-position font-bold">| Advanced Level</span>
             </h3>
           </header>
-          <p class="mt-2.1 ">
+          <p class="mt-2.1">
             I've been using Arch Linux daily for almost 6 years now and have
             gained a lot of experience in this field.
             <br />
@@ -505,9 +511,7 @@
           </p>
           <div class="my-3.2 last:pb-1.5">
             <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Nginx
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Nginx</li>
               <li class="chip bg-terminal-cyan text-terminal-black">
                 Ubuntu Server
               </li>
@@ -524,30 +528,22 @@
           <header>
             <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
               Kubernetes
-              <span class="text-position font-bold">
-                | Intermediate Level
-              </span>
+              <span class="text-position font-bold">| Intermediate Level</span>
             </h3>
           </header>
-          <p class="mt-2.1 ">
+          <p class="mt-2.1">
             I've gained a lot of knowledge while using Kubernetes to deploy
-            Pletora, including how to create scalable deployments, Ingress,
-            certificate management and more.
+            Pletora and Leanheat Monitor, including how to create scalable
+            deployments, Ingress, certificate management and more.
           </p>
           <div class="my-3.2 last:pb-1.5">
             <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Ingress
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Ingress</li>
               <li class="chip bg-terminal-cyan text-terminal-black">
                 Cert-manager
               </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                K8s
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Rancher
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">K8s</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Rancher</li>
               <li class="chip bg-terminal-cyan text-terminal-black">
                 Deployments
               </li>
@@ -558,26 +554,18 @@
           <header>
             <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
               Java
-              <span class="text-position font-bold">
-                | Intermediate Level
-              </span>
+              <span class="text-position font-bold">| Intermediate Level</span>
             </h3>
           </header>
-          <p class="mt-2.1 ">
+          <p class="mt-2.1">
             I've used Java in almost all my courses at SDU and have build a
             couple of simple Android apps.
           </p>
           <div class="my-3.2 last:pb-1.5">
             <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Android
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Swing
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                JavaFX
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Android</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Swing</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">JavaFX</li>
               <li class="chip bg-terminal-cyan text-terminal-black">
                 Networking
               </li>
@@ -588,37 +576,26 @@
           <header>
             <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
               Embedded Programming
-              <span class="text-position font-bold">
-                | Intermediate Level
-              </span>
+              <span class="text-position font-bold">| Intermediate Level</span>
             </h3>
           </header>
-          <p class="mt-2.1 ">
+          <p class="mt-2.1">
             I enjoy making embedded programming as a hobby and love to use the
-            ESP32, TI Lauchpad, Arduino and more. <br />
+            ESP32, TI Lauchpad, Arduino and more.
+            <br />
             Here I mainly use the PlatformIO and either C++ or Rust as the
             language.
           </p>
           <div class="my-3.2 last:pb-1.5">
             <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                ESP32
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Arduino
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                C++
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">ESP32</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Arduino</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">C++</li>
               <li class="chip bg-terminal-cyan text-terminal-black">
                 TI Launchpad
               </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Rust
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Go
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Rust</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Go</li>
             </ul>
           </div>
         </section>
@@ -626,34 +603,29 @@
           <header>
             <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
               Network Administration
-              <span class="text-position font-bold">
-                | Intermediate Level
-              </span>
+              <span class="text-position font-bold">| Intermediate Level</span>
             </h3>
           </header>
-          <p class="mt-2.1 ">
+          <p class="mt-2.1">
             In my time at Coworking Plus I planned and built a networking
-            infrasture, currently supporting around 350 people. <br />
-            I gained a lot of knowledge regarding VLANs, WIFI coverage, network
-            management, multi-ip setups and more.
+            infrasture, currently supporting around 350 people.
+            <br />
+            I've gained knowledge of VLANs, WIFI coverage, network management,
+            multi-ip setups and more.
           </p>
           <div class="my-3.2 last:pb-1.5">
             <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
               <li class="chip bg-terminal-cyan text-terminal-black">
                 Ubiquiti Unifi
               </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                VLAN
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">VLAN</li>
               <li class="chip bg-terminal-cyan text-terminal-black">
                 Switching
               </li>
               <li class="chip bg-terminal-cyan text-terminal-black">
                 Firewall
               </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                WIFI
-              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">WIFI</li>
               <li class="chip bg-terminal-cyan text-terminal-black">
                 Network management
               </li>
@@ -683,9 +655,9 @@
                 </h3>
                 <p class="leading-normal text-md text-gray-650">
                   2016 – 2020
-                  <span class="text-position font-bold"
-                    >| BEng in Software Technology Engineering</span
-                  >
+                  <span class="text-position font-bold">
+                    | BEng in Software Technology Engineering
+                  </span>
                 </p>
                 <p class="leading-normal text-md text-terminal-white">
                   At SDU I learned how to approach a software project as a
@@ -710,13 +682,14 @@
               </h3>
               <p class="leading-normal text-md text-gray-650">
                 2012 – 2014
-                <span class="text-position font-bold"
-                  >| Professional degree - Multimedia Design</span
-                >
+                <span class="text-position font-bold">
+                  | Professional degree - Multimedia Design
+                </span>
               </p>
               <p class="leading-normal text-md text-terminal-white">
                 At Multimedia Design I learned a lot about the theory behind
-                what makes great UI and UX.<br />
+                great UI and UX.
+                <br />
                 We had courses with the purpose of teaching color theory,
                 composition, what engages with a user and more.
               </p>
