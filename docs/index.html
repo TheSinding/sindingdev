@@ -33,11 +33,11 @@
     <script>
       window.addEventListener("load", () => {
         const getTimeInYears = (date) => date / 1000 / 60 / 60 / 24 / 365
-        const birthday = new Date(1992, 10, 2)
+        const birthday = new Date(1992, 9, 2) // month index is 0 indexed
         const myAge = new Date() - birthday
         const ageInYears = getTimeInYears(myAge)
-        const calvinAge = getTimeInYears(new Date() - new Date(2020, 12, 20))
-        const workingAge = getTimeInYears(new Date() - new Date(2017, 1, 1))
+        const calvinAge = getTimeInYears(new Date() - new Date(2020, 11, 20))
+        const workingAge = getTimeInYears(new Date() - new Date(2017, 0, 1))
 
         document.getElementById("age").innerText = Math.floor(ageInYears)
         document.getElementById("calvin-age").innerText = Math.floor(calvinAge)
@@ -142,7 +142,7 @@
                 </header>
 
                 <p class="mt-2.1">
-                  I'm a courious and outgoing
+                  I'm a curious and outgoing
                   <span id="age"></span>
                   year-old, currently living in
                   <a
@@ -164,7 +164,7 @@
                   >
                     Harske Hubbi
                   </a>
-                  and old techno music. .
+                  and old techno music.
                 </p>
                 <p class="mt-8">
                   As a passionate Linux enthusiast and open-source contributor,
@@ -172,7 +172,7 @@
                   <span id="working-age"></span>
                   years to full-stack development. During this time, I've gained
                   expertise in a range of technologies including Node.js,
-                  TypeScript, Vue.js, FeathersJS, React, Laravel, PostgreSQL,
+                  TypeScript, Vue.js, FeathersJS, React, PostgreSQL, Azure,
                   MongoDB, DevOps and more.
                 </p>
                 <p class="mt-8">
@@ -181,9 +181,10 @@
                     href="https://danfoss.com"
                     class="text-danfoss text-bold hover:text-terminal-yellow"
                   >
-                    Danfoss
+                    <span>Danfoss</span>
                   </a>
-                  , a prominent Danish company that is globally renowned for its
+                  <span class="-ml-3">,</span>
+                  a prominent Danish company that is globally renowned for its
                   sustainable solutions.
                   <br />
                   With colleagues across China, India, Ukraine, Slovenia,
@@ -225,13 +226,37 @@
                   >
                     Danfoss
                   </h3>
-                  <p class="leading-normal text-md text-terminal-black-1">
-                    October 2020 - Present
-                    <span class="text-position font-bold">
-                      | Software Engineer
-                    </span>
-                  </p>
                 </header>
+                <p class="leading-normal text-md text-terminal-black-1">
+                  September 2022 - Present
+                  <span class="text-position font-bold">
+                    | Senior Software Engineer
+                  </span>
+                </p>
+                <p class="mt-2.1">
+                  Working to optimize and improve code quality with the Software
+                  Tools Team.
+                  <br />
+                  Our main product is
+                  <a
+                    href="https://www.danfoss.com/en/products/dcs/monitoring-and-services/storeview-web/"
+                    class="main-link"
+                    target="_blank"
+                  >
+                    Storeview Web.
+                  </a>
+                  <br />
+                  Working with Azure DevOps, React, XML.
+                  <br />
+                  Making decisions that impacts the future of the product.
+                </p>
+                <br />
+                <p class="leading-normal text-md text-terminal-black-1">
+                  October 2020 - September 2022
+                  <span class="text-position font-bold">
+                    | Software Engineer
+                  </span>
+                </p>
                 <p class="mt-2.1">
                   Creating software helping the green transition with district
                   heating.
@@ -262,11 +287,11 @@
                     </span>
                   </p>
                 </header>
-                I've learned a lot about the startup-industry. Mainly how to
-                approach the SME market and how essential customer feedback is
-                when you develop new software.
-                <br />
-
+                <p>
+                  I've learned a lot about the startup-industry. Mainly how to
+                  approach the SME market and how essential customer feedback is
+                  when you develop new software.
+                </p>
                 <p class="mt-2.1">
                   Worked as CEO / CTO of
                   <a
@@ -275,11 +300,15 @@
                   >
                     Pletora
                   </a>
-                  , which is a SaaS-platform. I built the platform with NodeJS,
-                  Typescript, Postgres and VueJS.
+                  <span class="-ml-3">,</span>
+                  which was a SaaS-platform booking platform integrating with
+                  Microsoft Office 365.
+                  <br />
+                  I built the platform with NodeJS, Typescript, Postgres and
+                  VueJS.
                 </p>
               </section>
-              <section class="mb-4.5 break-inside-avoid">
+              <!-- <section class="mb-4.5 break-inside-avoid">
                 <header>
                   <h3
                     class="text-lg font-bold text-terminal-cyan leading-snugish"
@@ -297,7 +326,7 @@
                   Doing volunteer work as a lighting technician at various
                   electron music concerts and on the board.
                 </p>
-              </section>
+              </section> -->
             </div>
 
             <section class="mb-4.5 break-inside-avoid">
@@ -314,13 +343,12 @@
                   </span>
                 </p>
               </header>
-              <ul class="">
-                <li class="mt-2.1">
-                  Designed and built the networking infrasture of the largest
-                  coworking space in Southern Denmark. The entire coworking
-                  space is running on Ubiquiti Unifi.
-                </li>
-              </ul>
+
+              <p>
+                Designed and built the networking infrastructure of the largest
+                coworking space in Southern Denmark. The entire coworking space
+                is running on Ubiquiti Unifi.
+              </p>
             </section>
             <section class="mb-4.5 break-inside-avoid">
               <header>
@@ -339,7 +367,7 @@
                 Adobe After effects and Web Programming
               </p>
             </section>
-            <section class="mb-4.5 break-inside-avoid">
+            <!-- <section class="mb-4.5 break-inside-avoid">
               <header>
                 <h3
                   class="text-lg font-bold text-terminal-cyan leading-snugish"
@@ -375,11 +403,159 @@
                   </li>
                 </ul>
               </div>
-            </section>
+            </section> -->
           </section>
 
           <!-- end Column -->
         </div>
+      </div>
+      <div
+        class="p-6 mx-auto page max-w-2xl print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16"
+      >
+        <!-- To keep in the same column -->
+        <h2
+          class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
+        >
+          # MY OWN PROJECTS
+        </h2>
+
+        <section class="mb-4.5 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+              TaskStarter
+              <span class="text-position font-bold">| VS Code extension</span>
+            </h3>
+          </header>
+          <div class="mt-2.1 flex space-y-2 flex-col">
+            <span>
+              I've gotten frustrated with Azure DevOps Boards to find the next
+              task I need to start. So I created a plugin for VSCode to do the
+              work for me. 😅
+            </span>
+
+            <span>
+              Are you tired of having to go to your Azure DevOps sprint board to
+              find the task you are supposed to work on just to get the ID of
+              the task? 😓
+            </span>
+
+            <span>
+              Do
+              <b>YOU</b>
+              name your feature branches like this: 🤔
+            </span>
+
+            <pre class="bg-terminal-cyan p-3 text-black">
+  feature/${taskID}-${taskName}
+</pre
+            >
+
+            <span class="mt-4">
+              Well it
+              <b>MIGHT</b>
+              just be your lucky day! 🍀
+            </span>
+
+            <span class="font-bold text-lg text-terminal-yellow">
+              This extension fixes that! 💡
+            </span>
+
+            <span>
+              Now you can start your task from the comfort of your lovely little
+              memory-hogging vscode "IDE." 💻
+            </span>
+
+            <span>
+              Just use the
+              <b>"Start new task"</b>
+              command, and it will display the tasks in the current iteration of
+              your sprint! 🚀
+            </span>
+
+            <span>
+              Find the task you want to work on and hit enter. It will magically
+              create a new branch with the correct name for you, no need to
+              intervene. 🪄
+            </span>
+
+            <span>
+              When you are done with your branch, you simply use the command
+              <b>"Finish task"</b>
+              and it even creates A PULL REQUEST and you to it on Azure DevOps!
+              🙌
+            </span>
+
+            <span>
+              So what are you waiting for?! We are in short supply so get it
+              while you can! ⏳
+            </span>
+
+            <a
+              href="https://github.com/TheSinding/TaskStarter"
+              class="main-link"
+            >
+              Task Starter - Github
+            </a>
+            <a
+              href="https://marketplace.visualstudio.com/items?itemName=thesinding.taskstarter"
+              class="main-link"
+            >
+              Task Starter - VSCode Marketplace
+            </a>
+          </div>
+          <div class="my-3.2 last:pb-1.5">
+            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                Typescript
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                VSCode Extensions
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                Azure DevOps
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">API</li>
+            </ul>
+          </div>
+        </section>
+        <section class="mb-4.5 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+              w830-logger
+              <span class="text-position font-bold">| Simple project</span>
+            </h3>
+          </header>
+          <div class="mt-2.1 flex flex-col">
+            <span>
+              Simple metrics collector for a Ventus w830 weather station. You
+              can configure the weather station with the "Ecowitt" API and
+              custom location, then point it to this server.
+            </span>
+            <span>
+              This server exposes a Prometheus Metrics collection point on
+              <pre>/metrics</pre>
+              which you can use for collecting the data into Prometheus and
+              Grafana
+            </span>
+            <a
+              href="https://github.com/TheSinding/w830-logger"
+              class="main-link"
+            >
+              w830-logger - Github
+            </a>
+          </div>
+          <div class="my-3.2 last:pb-1.5">
+            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+              <li class="chip bg-terminal-cyan text-terminal-black">MongoDB</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Ecowitt</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Docker</li>
+              <li class="chip bg-terminal-cyan text-terminal-black">
+                Prometheus
+              </li>
+              <li class="chip bg-terminal-cyan text-terminal-black">Grafana</li>
+            </ul>
+          </div>
+        </section>
       </div>
       <div
         class="p-6 mx-auto page max-w-2xl print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16"
@@ -401,7 +577,7 @@
           <p class="mt-2.1">
             I have worked with Javascript and Typescript for the last
             <span id="js-age"></span>
-            years and have developed a deep knowledge regarding the langauges.
+            years and have developed a deep knowledge regarding the languages.
             <br />
             I have contributed to various open source projects. Mainly the
             <a href="https://feathersjs.com/" class="main-link">FeathersJS</a>
@@ -615,6 +791,7 @@
           </div>
         </section>
       </div>
+
       <div
         class="p-6 mx-auto page max-w-2xl print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16"
       >
