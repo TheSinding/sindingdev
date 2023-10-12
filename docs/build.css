@@ -20946,7 +20946,8 @@ body{
   h2,
   h3,
   p,
-  li {
+  li,
+  span {
     color: black !important;
   }
 
