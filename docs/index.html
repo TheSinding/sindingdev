@@ -33,14 +33,31 @@
     <script>
       window.addEventListener("load", () => {
         const getTimeInYears = (date) => date / 1000 / 60 / 60 / 24 / 365
+        const getTimeInMonths = (date) => date / 1000 / 60 / 60 / 24 / 30.44 // average days per month
         const birthday = new Date(1992, 9, 2) // month index is 0 indexed
         const myAge = new Date() - birthday
         const ageInYears = getTimeInYears(myAge)
-        const calvinAge = getTimeInYears(new Date() - new Date(2020, 11, 20))
+        
+        const calvinBirthDate = new Date(2020, 11, 20)
+        const calvinAge = getTimeInYears(new Date() - calvinBirthDate)
+        
+        const ellieBirthDate = new Date(2024, 8, 16) // September 16, 2024 (month is 0-indexed)
+        const ellieAge = getTimeInYears(new Date() - ellieBirthDate)
+        const ellieAgeInMonths = getTimeInMonths(new Date() - ellieBirthDate)
+        
         const workingAge = getTimeInYears(new Date() - new Date(2017, 0, 1))
 
         document.getElementById("age").innerText = Math.floor(ageInYears)
         document.getElementById("calvin-age").innerText = Math.floor(calvinAge)
+        
+        // Show months if under 1 year, otherwise show years
+        if (ellieAge < 1) {
+          document.getElementById("ellie-age").innerText = Math.floor(ellieAgeInMonths)
+          document.getElementById("ellie-age-unit").innerText = Math.floor(ellieAgeInMonths) === 1 ? "month" : "months"
+        } else {
+          document.getElementById("ellie-age").innerText = Math.floor(ellieAge)
+          document.getElementById("ellie-age-unit").innerText = Math.floor(ellieAge) === 1 ? "year" : "years"
+        }
         document.getElementById("working-age").innerText =
           Math.floor(workingAge)
         document.getElementById("js-age").innerText = Math.floor(workingAge)
@@ -152,9 +169,11 @@
                   >
                     Svendborg
                   </a>
-                  with my girlfriend and our
+                  with my girlfriend and our two children:
                   <span id="calvin-age"></span>
-                  year old son, Calvin. I'm a "fynbo" with a capital
+                  year old son Calvin and 
+                  <span id="ellie-age"></span>
+                  <span id="ellie-age-unit">months</span> old daughter Ellie. I'm a "fynbo" with a capital
                   <strong class="text-terminal-cyan">F</strong>
                   and love
                   <a
@@ -193,7 +212,7 @@
                 </p>
                 <p class="mt-8">
                   In my daily life and my spare time, I code small projects,
-                  plays Counter Strike, just like I spend time with my
+                  play Counter Strike, and spend time with my
                   girlfriend & family.
                   <br />
                   I'm on the board of a local non-profit organization called
@@ -203,7 +222,7 @@
                   >
                     Odeology
                   </a>
-                  where I occationally in the weekends work as a lighting
+                  where I occasionally in the weekends work as a lighting
                   technician at various electronic and techno music concerts and
                   festivals.
                 </p>
@@ -228,27 +247,49 @@
                   </h3>
                 </header>
                 <p class="leading-normal text-md text-terminal-black-1">
-                  September 2022 - Present
+                  October 2024 - Present
                   <span class="text-position font-bold">
                     | Senior Software Engineer
                   </span>
                 </p>
                 <p class="mt-2.1">
-                  Working to optimize and improve code quality with the Software
-                  Tools Team.
+                  Developing the
+                  <a
+                    href="https://www.danfoss.com/en/products/dhs/smart-heating/danfoss-ally/"
+                    class="main-link"
+                    target="_blank"
+                  >
+                    Danfoss Ally™
+                  </a>
+                  smart heating platform - IoT solution with mobile app and smart thermostats.
                   <br />
-                  Our main product is
+                  Architected mobile applications using React, TypeScript, and Tuya Smart Application Framework.
+                  <br />
+                  Integrated Zigbee 3.0 protocols for seamless device communication and implemented cloud-native solutions.
+                </p>
+                <br />
+                <p class="leading-normal text-md text-terminal-black-1">
+                  September 2022 - October 2024
+                  <span class="text-position font-bold">
+                    | Senior Software Engineer
+                  </span>
+                </p>
+                <p class="mt-2.1">
+                  Led code quality optimization and development processes with the Software Tools Team.
+                  <br />
+                  Developed and maintained
                   <a
                     href="https://www.danfoss.com/en/products/dcs/monitoring-and-services/storeview-web/"
                     class="main-link"
                     target="_blank"
                   >
-                    Storeview Web.
+                    Storeview Web
                   </a>
+                  - enterprise monitoring solution.
                   <br />
-                  Working with Azure DevOps, React, XML.
+                  Implemented CI/CD pipelines using Azure DevOps, React, and XML technologies.
                   <br />
-                  Making decisions that impacts the future of the product.
+                  Architected technical decisions impacting product roadmap and scalability.
                 </p>
                 <br />
                 <p class="leading-normal text-md text-terminal-black-1">
@@ -258,10 +299,9 @@
                   </span>
                 </p>
                 <p class="mt-2.1">
-                  Creating software helping the green transition with district
-                  heating.
+                  Developed sustainable software solutions for district heating optimization and green energy transition.
                   <br />
-                  Working in the
+                  Built and maintained
                   <a
                     href="https://www.danfoss.com/en/products/dhs/software-solutions/danfoss-leanheat-software-suite-services/leanheat-monitor/"
                     class="main-link"
@@ -269,104 +309,97 @@
                   >
                     Leanheat Monitor
                   </a>
-                  team. Utializing technologies like React, NodeJS, K8s,
-                  Terraform, MongoDB and more.
-                </p>
-              </section>
-              <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3
-                    class="text-lg font-bold text-terminal-cyan leading-snugish"
-                  >
-                    Pletora
-                  </h3>
-                  <p class="leading-normal text-md text-terminal-black-1">
-                    May 2019 - October 2021
-                    <span class="text-position font-bold">
-                      | Master Booker and Founder
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  I've learned a lot about the startup-industry. Mainly how to
-                  approach the SME market and how essential customer feedback is
-                  when you develop new software.
-                </p>
-                <p class="mt-2.1">
-                  Worked as CEO / CTO of
-                  <a
-                    href="https://pletora.io"
-                    class="font-bold hover:text-terminal-yellow text-pletora"
-                  >
-                    Pletora
-                  </a>
-                  <span class="-ml-3">,</span>
-                  which was a SaaS-platform booking platform integrating with
-                  Microsoft Office 365.
+                  platform using cloud-native technologies.
                   <br />
-                  I built the platform with NodeJS, Typescript, Postgres and
-                  VueJS.
+                  Implemented microservices architecture with React, Node.js, Kubernetes, Terraform, and MongoDB.
                 </p>
               </section>
-              <!-- <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3
-                    class="text-lg font-bold text-terminal-cyan leading-snugish"
-                  >
-                    Odeology
-                  </h3>
-                  <p class="leading-normal text-md text-terminal-black-1">
-                    April 2018 - Present
-                    <span class="text-position font-bold">
-                      | Board Member & Light Technician
-                    </span>
-                  </p>
-                </header>
-                <p class="mt-2.1">
-                  Doing volunteer work as a lighting technician at various
-                  electron music concerts and on the board.
-                </p>
-              </section> -->
             </div>
+          </section>
 
-            <section class="mb-4.5 break-inside-avoid">
-              <header>
-                <h3
-                  class="text-lg font-bold text-terminal-cyan leading-snugish"
-                >
-                  Coworking Plus
-                </h3>
-                <p class="leading-normal text-md text-gray-650">
-                  Oct 2015 – Aug 2020
-                  <span class="text-position font-bold">
-                    | Network Administrator
-                  </span>
-                </p>
-              </header>
+          <!-- end Column -->
+        </div>
+      </div>
+      <div
+        class="p-6 mx-auto page max-w-2xl print:mt-16 print:h-screen print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16"
+      >
+        <!-- Additional Experience -->
+        <h2
+          class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
+        >
+          # ADDITIONAL EXPERIENCE
+        </h2>
+        
+        <section class="mb-4.5 break-inside-avoid">
+          <header>
+            <h3
+              class="text-lg font-bold text-terminal-cyan leading-snugish"
+            >
+              Pletora
+            </h3>
+            <p class="leading-normal text-md text-terminal-black-1">
+              May 2019 - October 2021
+              <span class="text-position font-bold">
+                | Master Booker and Founder
+              </span>
+            </p>
+          </header>
+          <p>
+            Learned about startup industry, SME market approach and customer feedback importance.
+          </p>
+          <p class="mt-2.1">
+            Founded and served as CEO/CTO of
+            <a
+              href="https://pletora.io"
+              class="font-bold hover:text-terminal-yellow text-pletora"
+            >
+              Pletora
+            </a>
+            <span class="-ml-3">,</span>
+            a SaaS booking platform integrating with Microsoft Office 365.
+            <br />
+            Built with Node.js, TypeScript, PostgreSQL and Vue.js.
+          </p>
+        </section>
 
-              <p>
-                Designed and built the networking infrastructure of the largest
-                coworking space in Southern Denmark. The entire coworking space
-                is running on Ubiquiti Unifi.
-              </p>
-            </section>
-            <section class="mb-4.5 break-inside-avoid">
-              <header>
-                <h3
-                  class="text-lg font-bold text-terminal-cyan leading-snugish"
-                >
-                  Ung Plus Vest
-                </h3>
-                <p class="leading-normal text-md text-gray-650">
-                  Oct 2015 – Oct 2016
-                  <span class="text-position font-bold">| Teacher</span>
-                </p>
-              </header>
-              <p class="mt-2.1">
-                Worked as a teacher with kids in the age of 13 - 18. I taught
-                Adobe After effects and Web Programming
-              </p>
-            </section>
+        <section class="mb-4.5 break-inside-avoid">
+          <header>
+            <h3
+              class="text-lg font-bold text-terminal-cyan leading-snugish"
+            >
+              Coworking Plus
+            </h3>
+            <p class="leading-normal text-md text-gray-650">
+              Oct 2015 – Aug 2020
+              <span class="text-position font-bold">
+                | Network Administrator
+              </span>
+            </p>
+          </header>
+
+          <p>
+            Designed and built networking infrastructure for Southern Denmark's largest
+            coworking space supporting 350+ users. Using Ubiquiti Unifi.
+          </p>
+        </section>
+        
+        <section class="mb-4.5 break-inside-avoid">
+          <header>
+            <h3
+              class="text-lg font-bold text-terminal-cyan leading-snugish"
+            >
+              Ung Plus Vest
+            </h3>
+            <p class="leading-normal text-md text-gray-650">
+              Oct 2015 – Oct 2016
+              <span class="text-position font-bold">| Teacher</span>
+            </p>
+          </header>
+          <p class="mt-2.1">
+            Delivered technical education programs for 13-18 year students,
+            teaching Adobe After Effects and web development fundamentals with hands-on project-based learning.
+          </p>
+        </section>
             <!-- <section class="mb-4.5 break-inside-avoid">
               <header>
                 <h3
@@ -584,12 +617,12 @@
             project.
             <br />
             I have made various authentication plugins and helped fix various
-            bugs and I'm a contributer on the
+            bugs and I'm a contributor on the
             <a
               href="https://github.com/feathers-plus/feathers-authentication-management"
               class="main-link"
             >
-              Feathers Authentication Manament
+              Feathers Authentication Management
             </a>
             project
           </p>
@@ -692,7 +725,7 @@
           <p class="mt-2.1">
             I've gained a lot of knowledge while using Kubernetes to deploy
             Pletora and Leanheat Monitor, including how to create scalable
-            deployments, Ingress, certificate management and more.
+            deployments and manage containerized applications, Ingress, certificate management and more.
           </p>
           <div class="my-3.2 last:pb-1.5">
             <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
@@ -766,7 +799,7 @@
           </header>
           <p class="mt-2.1">
             In my time at Coworking Plus I planned and built a networking
-            infrasture, currently supporting around 350 people.
+            infrastructure, currently supporting around 350 people.
             <br />
             I've gained knowledge of VLANs, WIFI coverage, network management,
             multi-ip setups and more.
@@ -820,7 +853,7 @@
                 <p class="leading-normal text-md text-terminal-white">
                   At SDU I learned how to approach a software project as a
                   Software Engineer. I learned a lot of the methods and tools
-                  used, like UML, MoSCoW, Requirments, software maintainance and
+                  used, like UML, MoSCoW, Requirements, software maintenance and
                   more.
                   <br />
                   Most importantly I learned how to work as a team and how to
