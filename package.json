@@ -1,0 +1,41 @@
+{
+  "name": "universal-resume-template",
+  "version": "3.0.0",
+  "description": "Minimal and formal résumé (CV) website template for print, mobile, and desktop. https://bit.ly/2kEzgt8",
+  "homepage": "https://github.com/WebPraktikos/universal-resume",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WebPraktikos/universal-resume.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebPraktikos/universal-resume/issues"
+  },
+  "license": "NonCommercial-ShareAlike 1.0 Generic",
+  "author": "WebPraktikos <hi@webpraktikos.com>",
+  "scripts": {
+    "serve": "concurrently \"postcss ./tailwind.css -o docs/build.css --watch\"  \"live-server ./docs \"",
+    "build": "cross-env NODE_ENV=production postcss ./tailwind.css -o ./docs/build.css",
+    "generate-resume": "node scripts/cli-generate.js",
+    "resume:lego": "node scripts/cli-generate.js lego",
+    "resume:frontend": "node scripts/cli-generate.js frontend",
+    "resume:startup": "node scripts/cli-generate.js startup",
+    "resume:iot": "node scripts/cli-generate.js iot",
+    "resume:cloud": "node scripts/cli-generate.js cloudDevOps",
+    "resume:list": "node scripts/cli-generate.js --list",
+    "resume:help": "node scripts/cli-generate.js --help"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.0.6",
+    "autoprefixer": "^9.7.4",
+    "concurrently": "^5.1.0",
+    "cross-env": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "live-server": "^1.2.1",
+    "postcss-cli": "^7.0.0",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.2.0",
+    "puppeteer": "^21.5.0",
+    "js-yaml": "^4.1.0"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
