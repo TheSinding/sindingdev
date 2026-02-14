@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="description" content="Fullstack Developer" />
     <meta name="keywords" content="resume,cv,Simon Sinding" />
@@ -9,389 +10,371 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="./build.css" rel="stylesheet" />
     <title>Simon Sinding — Resume</title>
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css"
-    />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css" />
     <!-- End Matomo Code -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
     <!-- and it's easy to individually load additional languages -->
-    <script
-      charset="UTF-8"
-      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/go.min.js"
-    ></script>
+    <script charset="UTF-8"
+        src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/go.min.js"></script>
 
     <script>
-      window.addEventListener("load", () => {
-        console.log(
-          "%cYou are a nosey little one, aren't you ?",
-          "font-size: 20px"
-        )
-        console.error("Nothing exciting here!")
-      })
+        window.addEventListener("load", () => {
+            console.log(
+                "%cYou are a nosey little one, aren't you ?",
+                "font-size: 20px"
+            )
+            console.error("Nothing exciting here!")
+        })
     </script>
     <script>
-      window.addEventListener("load", () => {
-        const getTimeInYears = (date) => date / 1000 / 60 / 60 / 24 / 365
-        const getTimeInMonths = (date) => date / 1000 / 60 / 60 / 24 / 30.44 // average days per month
-        const birthday = new Date(1992, 9, 2) // month index is 0 indexed
-        const myAge = new Date() - birthday
-        const ageInYears = getTimeInYears(myAge)
-        
-        const oldestBirthDate = new Date(2020, 11, 20)
-        const oldestAge = getTimeInYears(new Date() - oldestBirthDate)
-        
-        const youngestBirthDate = new Date(2024, 8, 16) // September 16, 2024 (month is 0-indexed)
-        const youngestAge = getTimeInYears(new Date() - youngestBirthDate)
-        const workingAge = getTimeInYears(new Date() - new Date(2017, 0, 1))
+        window.addEventListener("load", () => {
+            const getTimeInYears = (date) => date / 1000 / 60 / 60 / 24 / 365
+            const getTimeInMonths = (date) => date / 1000 / 60 / 60 / 24 / 30.44 // average days per month
+            const birthday = new Date(1992, 9, 2) // month index is 0 indexed
+            const myAge = new Date() - birthday
+            const ageInYears = getTimeInYears(myAge)
 
-        document.getElementById("age").innerText = Math.floor(ageInYears)
-        document.getElementById("oldest-age").innerText = Math.floor(oldestAge)
-        document.getElementById("youngest-age").innerText = Math.floor(youngestAge)
-        document.getElementById("working-age").innerText =
-          Math.floor(workingAge)
-        document.getElementById("js-age").innerText = Math.floor(workingAge)
+            const oldestBirthDate = new Date(2020, 11, 20)
+            const oldestAge = getTimeInYears(new Date() - oldestBirthDate)
 
-        const start = new Date(2019, 1, 1)
-        const end = new Date()
+            const youngestBirthDate = new Date(2024, 8, 16) // September 16, 2024 (month is 0-indexed)
+            const youngestAge = getTimeInYears(new Date() - youngestBirthDate)
+            const workingAge = getTimeInYears(new Date() - new Date(2017, 0, 1))
 
-        document.getElementById(
-          "copyright-year"
-        ).innerText = `${start.getFullYear()} - ${end.getFullYear()}`
-      })
+            document.getElementById("age").innerText = Math.floor(ageInYears)
+            document.getElementById("oldest-age").innerText = Math.floor(oldestAge)
+            document.getElementById("youngest-age").innerText = Math.floor(youngestAge)
+            document.getElementById("working-age").innerText =
+                Math.floor(workingAge)
+            document.getElementById("js-age").innerText = Math.floor(workingAge)
+
+            const start = new Date(2019, 1, 1)
+            const end = new Date()
+
+            document.getElementById(
+                "copyright-year"
+            ).innerText = `${start.getFullYear()} - ${end.getFullYear()}`
+        })
     </script>
     <script>
-      hljs.initHighlightingOnLoad()
+        hljs.initHighlightingOnLoad()
     </script>
-  </head>
+</head>
 
-  <body>
+<body>
     <main class="hyphens-manual">
-      <!-- Page -->
-      <div
-        class="p-6 mx-auto page max-w-2xl print:h-screen print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16"
-      >
-        <!-- Name -->
-        <header class="grid grid-cols-2 items-center mb-8 md:mb-11">
-          <div>
-            <p class="font-bold text-terminal-yellow text-2xl italic">
-              # SIMON SINDING
-            </p>
-            <p class="mt-1.5 leading-normal text-md main-link">
-              <a href="mailto: simon@sinding.dev">
-                simon@sinding.dev
-                <span
-                  class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in"
-                >
-                  ↗
-                </span>
-              </a>
-            </p>
-            <p class="mt-1.5 leading-normal text-terminal-white text-md">
-              (+45) 6070 4207
-            </p>
-          </div>
-          <div>
-            <p class="mt-1.5 leading-normal text-md main-link">
-              <a href="https://sinding.dev" class="">
-                sinding.dev
-                <span
-                  class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in"
-                >
-                  ↗
-                </span>
-              </a>
-            </p>
-
-            <p class="mt-1.5 leading-normal text-md main-link">
-              <a href="https://www.linkedin.com/in/simon-sinding/" class="group">
-                linkedin.com/in/simon-sinding/
-                <span
-                  class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in"
-                >
-                  ↗
-                </span>
-              </a>
-            </p>
-            <p class="mt-1.5 leading-normal text-md main-link">
-              <a href="https://github.com/TheSinding">
-                github.com/TheSinding
-                <span
-                  class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in"
-                >
-                  ↗
-                </span>
-              </a>
-            </p>
-          </div>
-        </header>
-        <!-- end Name -->
-
-        <!-- Column -->
+        <!-- Page -->
         <div
-          class="md:col-count-2 print:col-count-2 col-gap-md md:h-a4-col print:h-a4-col col-fill-auto"
-        >
-          <section class="mt-8 first:mt-0">
-            <div class="break-inside-avoid">
-              <img src="/statics/new-img.jpeg" class="rounded-lg pb-4" alt="" />
-              <h2
-                class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
-              >
-                # ABOUT ME
-              </h2>
+            class="p-6 mx-auto page max-w-2xl print:h-screen print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16">
+            <!-- Name -->
+            <header class="grid grid-cols-2 items-center mb-8 md:mb-11">
+                <div>
+                    <h1 class="font-bold text-terminal-yellow text-2xl italic">
+                        # SIMON SINDING
+                    </h1>
+                    <p class="mt-1.5 leading-normal text-md main-link">
+                        <a href="mailto: simon@sinding.dev">
+                            simon@sinding.dev
+                            <span
+                                class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in">
+                                ↗
+                            </span>
+                        </a>
+                    </p>
+                    <p class="mt-1.5 leading-normal text-terminal-white text-md">
+                        (+45) 6070 4207
+                    </p>
+                </div>
+                <div>
+                    <p class="mt-1.5 leading-normal text-md main-link">
+                        <a href="https://sinding.dev" class="">
+                            sinding.dev
+                            <span
+                                class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in">
+                                ↗
+                            </span>
+                        </a>
+                    </p>
 
-              <section class="mb-4.5">
-                <header>
-                  <h3
-                    class="text-lg font-bold text-terminal-cyan leading-snugish"
-                  >
-                    Enthusiastic and ambitious person
-                  </h3>
-                </header>
+                    <p class="mt-1.5 leading-normal text-md main-link">
+                        <a href="https://www.linkedin.com/in/simon-sinding/" class="group">
+                            linkedin.com/in/simon-sinding/
+                            <span
+                                class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in">
+                                ↗
+                            </span>
+                        </a>
+                    </p>
+                    <p class="mt-1.5 leading-normal text-md main-link">
+                        <a href="https://github.com/TheSinding">
+                            github.com/TheSinding
+                            <span
+                                class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in">
+                                ↗
+                            </span>
+                        </a>
+                    </p>
+                </div>
+            </header>
+            <!-- end Name -->
 
-                <p class="mt-2.1">
-                  I'm a curious and outgoing
-                  <span id="age"></span>
-                  year-old, living with my girlfriend and our two children:
-                  a <span id="oldest-age"></span>
-                  years old boy and a
-                  <span id="youngest-age"></span> year old girl. I'm a "fynbo" with a capital
-                  <strong class="text-terminal-cyan">F</strong>
-                  and love
-                  <a
-                    href="https://www.harskehubbi.com/"
-                    class="main-link"
-                    target="_blank"
-                  >
-                    Harske Hubbi
-                  </a>
-                  and old techno music.
-                </p>
-                <p class="mt-8">
-                  As a passionate Linux enthusiast and open-source contributor,
-                  I've dedicated the last
-                  <span id="working-age"></span>
-                  years to full-stack development. During this time, I've gained
-                  expertise in a range of technologies including Node.js,
-                  TypeScript, Vue.js, FeathersJS, React, PostgreSQL, Azure,
-                  MongoDB, DevOps and more.
-                </p>
-                <p class="mt-8">
-                  Currently employed at
-                  <a
-                    href="https://danfoss.com"
-                    class="text-danfoss text-bold hover:text-terminal-yellow"
-                  >
-                    <span>Danfoss</span>
-                  </a>
-                  <span class="-ml-3">,</span>
-                  a prominent Danish company that is globally renowned for its
-                  sustainable solutions.
-                  <br />
-                  With colleagues across China, India, Ukraine, Slovenia,
-                  Poland, and Denmark, I've honed my remote work skills,
-                  effective communication, and team collaboration.
-                </p>
-                <p class="mt-8">
-                  In my daily life and my spare time, I code small projects,
-                  play Counter Strike, and spend time with my
-                  girlfriend & family.
-                  <br />
-                  I'm on the board of a local non-profit organization called
-                  <a
-                    class="main-link"
-                    href="https://www.facebook.com/Odeologyodense/"
-                  >
-                    Odeology
-                  </a>
-                  where I occasionally in the weekends work as a lighting
-                  technician at various electronic and techno music concerts and
-                  festivals.
-                </p>
-              </section>
+            <!-- Column -->
+            <div class="md:col-count-2 print:col-count-2 col-gap-md md:h-a4-col print:h-a4-col col-fill-auto">
+                <section class="mt-8 first:mt-0">
+                    <div class="break-inside-avoid">
+                        <img src="/statics/new-img.jpeg" class="rounded-lg pb-4" alt="Simon Sinding" />
+                        <h2
+                            class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal">
+                            # ABOUT ME
+                        </h2>
+
+                        <section class="mb-4.5">
+                            <header>
+                                <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                                    Enthusiastic and ambitious person
+                                </h3>
+                            </header>
+
+                            <p class="mt-2.1">
+                                I'm a curious and outgoing
+                                <span id="age"></span>
+                                year-old, living with my girlfriend and our two children:
+                                a <span id="oldest-age"></span>
+                                years old boy and a
+                                <span id="youngest-age"></span> year old girl. I'm a "fynbo" with a capital
+                                <strong class="text-terminal-cyan">F</strong>
+                                and love
+                                <a href="https://www.harskehubbi.com/" class="main-link" target="_blank">
+                                    Harske Hubbi
+                                </a>
+                                and old techno music.
+                            </p>
+                            <p class="mt-8">
+                                As a passionate Linux enthusiast and open-source contributor,
+                                I've dedicated the last
+                                <span id="working-age"></span>
+                                years to full-stack development. During this time, I've gained
+                                expertise in a range of technologies including Node.js,
+                                TypeScript, Vue.js, FeathersJS, React, PostgreSQL, Azure,
+                                MongoDB, DevOps and more.
+                            </p>
+                            <p class="mt-8">
+                                Currently snapping things into place at
+                                <a href="https://lego.com"
+                                    class="text-lego-yellow text-bold hover:text-terminal-yellow">
+                                    <span>the LEGO Group</span>
+                                </a>
+                                headquartered in Billund, where it turns out building software isn't
+                                that different from building with bricks — except the
+                                compiler hurts less to step on.
+                            </p>
+                            <p class="mt-8">
+                                In my daily life and my spare time, I code small projects,
+                                play Counter Strike, and spend time with my
+                                girlfriend & family.
+                            </p>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="mt-8 first:mt-0">
+                    <!-- To keep in the same column -->
+                    <div class="break-inside-avoid">
+                        <h2
+                            class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal">
+                            # EXPERIENCE
+                        </h2>
+
+                        <section class="mb-4.5 break-inside-avoid">
+                            <header>
+                                <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                                    Senior Software Engineer
+                                </h3>
+                                <p class="leading-normal text-md text-terminal-black-1">
+                                    the LEGO Group
+                                </p>
+                                <p class="leading-normal text-md text-gray-650">
+                                    Billund, Denmark
+                                </p>
+                                <p class="leading-normal text-md text-gray-650">
+                                    January 2026 - Present
+                                </p>
+                            </header>
+                            <p class="mt-2.1">
+                                Working in Assortment & Space Management with a Service Oriented Architecture.
+                            </p>
+                            <ul class="mt-2.1 list-disc list-inside text-md text-terminal-white leading-normal">
+                                <li>Optimizations of AWS Kubernetes and integrations with AWS services like Secrets Manager</li>
+                                <li>Optimizations of DevOps with Github Actions, AWS CDK</li>
+                                <li>Code reviews and participation in architectural discussions</li>
+                                <li>Knowledge sharing to reach the best possible solution for our team</li>
+                                <li>Working with React Frontend</li>
+                            </ul>
+                        </section>
+                        <section class="mb-4.5 break-inside-avoid">
+                            <header>
+                                <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                                    Senior Software Engineer
+                                </h3>
+                                <p class="leading-normal text-md text-terminal-black-1">
+                                    Danfoss A/S
+                                </p>
+                                <p class="leading-normal text-md text-gray-650">
+                                    Kolding, Denmark
+                                </p>
+                                <p class="leading-normal text-md text-gray-650">
+                                    October 2024 - January 2026
+                                </p>
+                            </header>
+                            <p class="mt-2.1">
+                                Developing the Danfoss Ally™ smart heating platform - IoT solution with mobile app and
+                                smart thermostats. Architected mobile applications using React, TypeScript, and Tuya
+                                Smart Application Framework.
+                            </p>
+                        </section>
+
+                        <section class="mb-4.5 break-inside-avoid">
+                            <header>
+                                <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                                    Senior Software Engineer
+                                </h3>
+                                <p class="leading-normal text-md text-terminal-black-1">
+                                    Danfoss A/S
+                                </p>
+                                <p class="leading-normal text-md text-gray-650">
+                                    Copenhagen, Denmark
+                                </p>
+                                <p class="leading-normal text-md text-gray-650">
+                                    September 2022 - October 2024
+                                </p>
+                            </header>
+                            <p class="mt-2.1">
+                                Acting tech lead in close collaboration with the Product Owner on the web interface for
+                                remote management of Danfoss Store Manager devices — a Smart Store solution for major
+                                supermarket chains in Denmark, Norway, Sweden, France, Australia, and the USA, improving
+                                food safety while reducing food waste and energy costs.
+
+                                Joined a struggling team and worked to turn things around, improving collaboration and
+                                team dynamics.
+
+                                Implemented CI/CD pipelines using Azure DevOps, React, and XML technologies. Architected
+                                technical decisions impacting product roadmap and scalability.
+                            </p>
+                        </section>
+
+                    </div>
+                </section>
+
+                <!-- end Column -->
             </div>
-          </section>
-
-          <section class="mt-8 first:mt-0">
-            <!-- To keep in the same column -->
-            <div class="break-inside-avoid">
-              <h2
-                class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
-              >
-                # EXPERIENCE
-              </h2>
-              <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3
-                    class="text-lg font-bold text-terminal-cyan leading-snugish"
-                  >
-                    Senior Software Engineer
-                  </h3>
-                  <p class="leading-normal text-md text-terminal-black-1">
-                    Danfoss A/S
-                  </p>
-                  <p class="leading-normal text-md text-gray-650">
-                    Kolding, Denmark
-                  </p>
-                  <p class="leading-normal text-md text-gray-650">
-                    October 2024 - Present
-                  </p>
-                </header>
-                <p class="mt-2.1">
-                  Developing the Danfoss Ally™ smart heating platform - IoT solution with mobile app and smart thermostats. Architected mobile applications using React, TypeScript, and Tuya Smart Application Framework.
-                </p>
-              </section>
-
-              <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3
-                    class="text-lg font-bold text-terminal-cyan leading-snugish"
-                  >
-                    Senior Software Engineer
-                  </h3>
-                  <p class="leading-normal text-md text-terminal-black-1">
-                    Danfoss A/S
-                  </p>
-                  <p class="leading-normal text-md text-gray-650">
-                    Copenhagen, Denmark
-                  </p>
-                  <p class="leading-normal text-md text-gray-650">
-                    September 2022 - October 2024
-                  </p>
-                </header>
-                <p class="mt-2.1">
-                  Acting tech lead in close collaboration with the Product Owner on the web interface for remote management of Danfoss Store Manager devices — a Smart Store solution for major supermarket chains in Denmark, Norway, Sweden, France, Australia, and the USA, improving food safety while reducing food waste and energy costs.
-
-Joined a struggling team and worked to turn things around, improving collaboration and team dynamics. 
-
-Implemented CI/CD pipelines using Azure DevOps, React, and XML technologies. Architected technical decisions impacting product roadmap and scalability.
-                </p>
-              </section>
-
-              <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3
-                    class="text-lg font-bold text-terminal-cyan leading-snugish"
-                  >
-                    Software Engineer
-                  </h3>
-                  <p class="leading-normal text-md text-terminal-black-1">
-                    Danfoss A/S
-                  </p>
-                  <p class="leading-normal text-md text-gray-650">
-                    Kolding, Denmark
-                  </p>
-                  <p class="leading-normal text-md text-gray-650">
-                    October 2020 - September 2022
-                  </p>
-                </header>
-                <p class="mt-2.1">
-                  Full-stack development on the B2B monitoring platform Leanheat Monitor, enabling the monitoring of primarily Danfoss ECL units for district heating — including third-party support:
-                  Developed sustainable software solutions for district heating optimization and green energy transition.
-                  Built and maintained Leanheat Monitor platform using cloud-native technologies.
-                  Implemented microservices architecture with React, Node.js, Kubernetes, Terraform, and MongoDB.
-                </p>
-              </section>
-            </div>
-          </section>
-
-          <!-- end Column -->
         </div>
-      </div>
-      <div
-        class="p-6 mx-auto page max-w-2xl print:mt-16 print:h-screen print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16"
-      >
-        <!-- Additional Experience -->
-        <h2
-          class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
-        >
-          # ADDITIONAL EXPERIENCE
-        </h2>
-        
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3
-              class="text-lg font-bold text-terminal-cyan leading-snugish"
-            >
-              Master Booker and Founder
-            </h3>
-            <p class="leading-normal text-md text-terminal-black-1">
-              Pletora ApS
-            </p>
-            <p class="leading-normal text-md text-gray-650">
-              Odense, Denmark
-            </p>
-            <p class="leading-normal text-md text-gray-650">
-              May 2019 - October 2021
-            </p>
-          </header>
-          <p>
-            Learned about startup industry, SME market approach and customer feedback importance.
-          </p>
-          <p class="mt-2.1">
-            Founded and served as CEO/CTO of
-            <a
-              href="https://pletora.io"
-              class="font-bold hover:text-terminal-yellow text-pletora"
-            >
-              Pletora ApS
-            </a>
-            <span class="-ml-3">,</span>
-            a SaaS booking platform integrating with Microsoft Office 365.
-            <br />
-            Built with Node.js, TypeScript, PostgreSQL and Vue.js.
-          </p>
-        </section>
+        <div
+            class="p-6 mx-auto page max-w-2xl print:mt-16 print:h-screen print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16">
+            <!-- Additional Experience -->
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal">
+                # ADDITIONAL EXPERIENCE
+            </h2>
 
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3
-              class="text-lg font-bold text-terminal-cyan leading-snugish"
-            >
-              Network Administrator
-            </h3>
-            <p class="leading-normal text-md text-terminal-black-1">
-              Coworking Plus ApS
-            </p>
-            <p class="leading-normal text-md text-gray-650">
-              Odense, Denmark
-            </p>
-            <p class="leading-normal text-md text-gray-650">
-              October 2015 - August 2020
-            </p>
-          </header>
+            <section class="mb-4.5 break-inside-avoid">
+                <header>
+                    <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                        Software Engineer
+                    </h3>
+                    <p class="leading-normal text-md text-terminal-black-1">
+                        Danfoss A/S
+                    </p>
+                    <p class="leading-normal text-md text-gray-650">
+                        Kolding, Denmark
+                    </p>
+                    <p class="leading-normal text-md text-gray-650">
+                        October 2020 - September 2022
+                    </p>
+                </header>
+                <p class="mt-2.1">
+                    Full-stack development on the B2B monitoring platform Leanheat Monitor, enabling the monitoring of
+                    primarily Danfoss ECL units for district heating — including third-party support:
+                    Developed sustainable software solutions for district heating optimization and green energy
+                    transition.
+                    Built and maintained Leanheat Monitor platform using cloud-native technologies.
+                    Implemented microservices architecture with React, Node.js, Kubernetes, Terraform, and MongoDB.
+                </p>
+            </section>
 
-          <p>
-            Designed and built networking infrastructure for Southern Denmark's largest
-            coworking space supporting 350+ users. Using Ubiquiti Unifi.
-          </p>
-        </section>
-        
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3
-              class="text-lg font-bold text-terminal-cyan leading-snugish"
-            >
-              Teacher
-            </h3>
-            <p class="leading-normal text-md text-terminal-black-1">
-              Ung Plus Vest (Non-profit)
-            </p>
-            <p class="leading-normal text-md text-gray-650">
-              Svendborg, Denmark
-            </p>
-            <p class="leading-normal text-md text-gray-650">
-              October 2015 - October 2016
-            </p>
-          </header>
-          <p class="mt-2.1">
-            Taught technical skills to students aged 13-18, including web development fundamentals 
-            and Adobe After Effects/Premiere Pro through hands-on, project-based learning.
-            <br />
-            Helped students build whatever projects they were interested in, 
-            from websites to video editing - just making sure they had fun while learning.
-          </p>
-        </section>
+            <section class="mb-4.5 break-inside-avoid">
+                <header>
+                    <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                        Master Booker and Founder
+                    </h3>
+                    <p class="leading-normal text-md text-terminal-black-1">
+                        Pletora ApS
+                    </p>
+                    <p class="leading-normal text-md text-gray-650">
+                        Odense, Denmark
+                    </p>
+                    <p class="leading-normal text-md text-gray-650">
+                        May 2019 - October 2021
+                    </p>
+                </header>
+                <p>
+                    Learned about startup industry, SME market approach and customer feedback importance.
+                </p>
+                <p class="mt-2.1">
+                    Founded and served as CEO/CTO of
+                    <a href="https://pletora.io" class="font-bold hover:text-terminal-yellow text-pletora">
+                        Pletora ApS
+                    </a>
+                    <span class="-ml-3">,</span>
+                    a SaaS booking platform integrating with Microsoft Office 365.
+                    <br />
+                    Built with Node.js, TypeScript, PostgreSQL and Vue.js.
+                </p>
+            </section>
+
+            <section class="mb-4.5 break-inside-avoid">
+                <header>
+                    <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                        Network Administrator
+                    </h3>
+                    <p class="leading-normal text-md text-terminal-black-1">
+                        Coworking Plus ApS
+                    </p>
+                    <p class="leading-normal text-md text-gray-650">
+                        Odense, Denmark
+                    </p>
+                    <p class="leading-normal text-md text-gray-650">
+                        October 2015 - August 2020
+                    </p>
+                </header>
+
+                <p>
+                    Designed and built networking infrastructure for Southern Denmark's largest
+                    coworking space supporting 350+ users. Using Ubiquiti Unifi.
+                </p>
+            </section>
+
+            <section class="mb-4.5 break-inside-avoid">
+                <header>
+                    <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                        Teacher
+                    </h3>
+                    <p class="leading-normal text-md text-terminal-black-1">
+                        Ung Plus Vest (Non-profit)
+                    </p>
+                    <p class="leading-normal text-md text-gray-650">
+                        Svendborg, Denmark
+                    </p>
+                    <p class="leading-normal text-md text-gray-650">
+                        October 2015 - October 2016
+                    </p>
+                </header>
+                <p class="mt-2.1">
+                    Taught technical skills to students aged 13-18, including web development fundamentals
+                    and Adobe After Effects/Premiere Pro through hands-on, project-based learning.
+                    <br />
+                    Helped students build whatever projects they were interested in,
+                    from websites to video editing - just making sure they had fun while learning.
+                </p>
+            </section>
             <!-- <section class="mb-4.5 break-inside-avoid">
               <header>
                 <h3
@@ -429,550 +412,517 @@ Implemented CI/CD pipelines using Azure DevOps, React, and XML technologies. Arc
                 </ul>
               </div>
             </section> -->
-          </section>
 
-          <!-- end Column -->
+            <!-- end Column -->
         </div>
-      </div>
-      <div
-        class="p-6 mx-auto page max-w-2xl print:mt-16 print:h-screen print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16"
-      >
-        <!-- To keep in the same column -->
-        <h2
-          class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
-        >
-          # MY OWN PROJECTS
-        </h2>
-
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
-              TaskStarter
-              <span class="text-position font-bold">| VS Code extension</span>
-            </h3>
-          </header>
-          <div class="mt-2.1 flex space-y-2 flex-col">
-            <span>
-              I've gotten frustrated with Azure DevOps Boards to find the next
-              task I need to start. So I created a plugin for VSCode to do the
-              work for me. 😅
-            </span>
-
-            <span>
-              Are you tired of having to go to your Azure DevOps sprint board to
-              find the task you are supposed to work on just to get the ID of
-              the task? 😓
-            </span>
-
-            <span>
-              Do
-              <b>YOU</b>
-              name your feature branches like this: 🤔
-            </span>
-
-            <pre class="bg-terminal-cyan p-3 text-black">
-  feature/${taskID}-${taskName}
-</pre
-            >
-
-            <span class="mt-4">
-              Well it
-              <b>MIGHT</b>
-              just be your lucky day! 🍀
-            </span>
-
-            <span class="font-bold text-lg text-terminal-yellow">
-              This extension fixes that! 💡
-            </span>
-
-            <span>
-              Now you can start your task from the comfort of your lovely little
-              memory-hogging vscode "IDE." 💻
-            </span>
-
-            <span>
-              Just use the
-              <b>"Start new task"</b>
-              command, and it will display the tasks in the current iteration of
-              your sprint! 🚀
-            </span>
-
-            <span>
-              Find the task you want to work on and hit enter. It will magically
-              create a new branch with the correct name for you, no need to
-              intervene. 🪄
-            </span>
-
-            <span>
-              When you are done with your branch, you simply use the command
-              <b>"Finish task"</b>
-              and it even creates A PULL REQUEST and you to it on Azure DevOps!
-              🙌
-            </span>
-
-            <span>
-              So what are you waiting for?! We are in short supply so get it
-              while you can! ⏳
-            </span>
-
-            <a
-              href="https://github.com/TheSinding/TaskStarter"
-              class="main-link"
-            >
-              Task Starter - Github
-            </a>
-            <a
-              href="https://marketplace.visualstudio.com/items?itemName=thesinding.taskstarter"
-              class="main-link"
-            >
-              Task Starter - VSCode Marketplace
-            </a>
-          </div>
-          <div class="my-3.2 last:pb-1.5">
-            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Typescript
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                VSCode Extensions
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Azure DevOps
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">API</li>
-            </ul>
-          </div>
-        </section>
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
-              w830-logger
-              <span class="text-position font-bold">| Simple project</span>
-            </h3>
-          </header>
-          <div class="mt-2.1 flex flex-col">
-            <span>
-              Simple metrics collector for a Ventus w830 weather station. You
-              can configure the weather station with the "Ecowitt" API and
-              custom location, then point it to this server.
-            </span>
-            <span>
-              This server exposes a Prometheus Metrics collection point on
-              <pre>/metrics</pre>
-              which you can use for collecting the data into Prometheus and
-              Grafana
-            </span>
-            <a
-              href="https://github.com/TheSinding/w830-logger"
-              class="main-link"
-            >
-              w830-logger - Github
-            </a>
-          </div>
-          <div class="my-3.2 last:pb-1.5">
-            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">MongoDB</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Ecowitt</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Docker</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Prometheus
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Grafana</li>
-            </ul>
-          </div>
-        </section>
-      </div>
-      <div
-        class="p-6 mx-auto page max-w-2xl print:mt-16 print:h-screen print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16"
-      >
-        <!-- To keep in the same column -->
-        <h2
-          class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
-        >
-          # SKILLS
-        </h2>
-
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
-              JavaScript / TypeScript
-              <span class="text-position font-bold">| Expert Level</span>
-            </h3>
-          </header>
-          <p class="mt-2.1">
-            I have worked with Javascript and Typescript for the last
-            <span id="js-age"></span>
-            years and have developed a deep knowledge regarding the languages.
-            <br />
-            I have contributed to various open source projects. Mainly the
-            <a href="https://feathersjs.com/" class="main-link">FeathersJS</a>
-            project.
-            <br />
-            I have made various authentication plugins and helped fix various
-            bugs and I'm a contributor on the
-            <a
-              href="https://github.com/feathers-plus/feathers-authentication-management"
-              class="main-link"
-            >
-              Feathers Authentication Management
-            </a>
-            project
-          </p>
-          <div class="my-3.2 last:pb-1.5">
-            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">ES6</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">React</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Redux</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Vuex</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Vue</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">NestJS</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Functional Programming
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">NodeJS</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                FeathersJS
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Stripe</li>
-            </ul>
-          </div>
-        </section>
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
-              DevOps
-              <span class="text-position font-bold">| Advanced Level</span>
-            </h3>
-          </header>
-          <p class="mt-2.1">
-            In my time building Pletora's code base, I've used quite a few
-            DevOps technologies.
-            <br />
-            I've built Pletora's stack using Docker, Gitlab Container Registry,
-            Digital Oceans managed Kubernetes and PostgreSQL, Gitlab CI/CD and
-            with automated build notifications.
-            <br />
-            Errors is automatically sent to Sentry.io which generates reports.
-          </p>
-          <div class="my-3.2 last:pb-1.5">
-            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Kubernetes
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Docker Swarm
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Docker</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Gitlab CI/CD
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Travis</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">CI/CD</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Digital Ocean
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Git</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Sentry</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Gitlab Container Registry
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
-              Linux
-              <span class="text-position font-bold">| Advanced Level</span>
-            </h3>
-          </header>
-          <p class="mt-2.1">
-            I've been using Arch Linux daily for almost 6 years now and have
-            gained a lot of experience in this field.
-            <br />
-            I manage many Linux servers and maintain various software.
-          </p>
-          <div class="my-3.2 last:pb-1.5">
-            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">Nginx</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Ubuntu Server
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Arch Linux
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                PostgresQL
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
-              Kubernetes
-              <span class="text-position font-bold">| Intermediate Level</span>
-            </h3>
-          </header>
-          <p class="mt-2.1">
-            I've gained a lot of knowledge while using Kubernetes to deploy
-            Pletora and Leanheat Monitor, including how to create scalable
-            deployments and manage containerized applications, Ingress, certificate management and more.
-          </p>
-          <div class="my-3.2 last:pb-1.5">
-            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">Ingress</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Cert-manager
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">K8s</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Rancher</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Deployments
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
-              Python
-              <span class="text-position font-bold">| Intermediate Level</span>
-            </h3>
-          </header>
-          <p class="mt-2.1">
-            I've used Python for various small projects, mainly for scripting
-            and data analysis. Also building small home assistant plugins.
-          </p>
-          <div class="my-3.2 last:pb-1.5">
-            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">Python</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Homeassistant</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Webscrapers</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Data parsing
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Reverse engineering
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                FastAPI
-              </li>
-
-            </ul>
-          </div>
-        </section>
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
-              Embedded Programming
-              <span class="text-position font-bold">| Intermediate Level</span>
-            </h3>
-          </header>
-          <p class="mt-2.1">
-            I enjoy making embedded programming as a hobby and love to use the
-            ESP32, TI Lauchpad, Arduino and more.
-            <br />
-            Here I mainly use the PlatformIO and either C++ or Rust as the
-            language.
-          </p>
-          <div class="my-3.2 last:pb-1.5">
-            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">ESP32</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Arduino</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">C++</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                TI Launchpad
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Rust</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">Go</li>
-            </ul>
-          </div>
-        </section>
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
-              Network Administration
-              <span class="text-position font-bold">| Intermediate Level</span>
-            </h3>
-          </header>
-          <p class="mt-2.1">
-            In my time at Coworking Plus I planned and built a networking
-            infrastructure, currently supporting around 350 people.
-            <br />
-            I've gained knowledge of VLANs, WIFI coverage, network management,
-            multi-ip setups and more.
-          </p>
-          <div class="my-3.2 last:pb-1.5">
-            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Ubiquiti Unifi
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">VLAN</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Switching
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Firewall
-              </li>
-              <li class="chip bg-terminal-cyan text-terminal-black">WIFI</li>
-              <li class="chip bg-terminal-cyan text-terminal-black">
-                Network management
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-      <div
-        class="p-6 mx-auto page max-w-2xl print:mt-16 print:h-screen print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16"
-      >
-        <!-- To keep in the same column -->
-
-        <section class="mt-8 first:mt-0">
-          <div class="break-inside-avoid">
-            <h2
-              class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
-            >
-              # EDUCATION
+        <div
+            class="p-6 mx-auto page max-w-2xl print:mt-16 print:h-screen print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16">
+            <!-- To keep in the same column -->
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal">
+                # MY OWN PROJECTS
             </h2>
 
             <section class="mb-4.5 break-inside-avoid">
-              <header>
-                <h3
-                  class="text-lg font-bold text-terminal-cyan leading-snugish"
-                >
-                  University Of Southern Denmark
-                </h3>
-                <p class="leading-normal text-md text-gray-650">
-                  2016 – 2020
-                  <span class="text-position font-bold">
-                    | BEng in Software Technology Engineering
-                  </span>
-                </p>
-                <p class="leading-normal text-md text-terminal-white">
-                  At SDU I learned how to approach a software project as a
-                  Software Engineer. I learned a lot of the methods and tools
-                  used, like UML, MoSCoW, Requirements, software maintenance and
-                  more.
-                  <br />
-                  Most importantly I learned how to work as a team and how to
-                  delegate tasks.
-                  <br />
-                  The programming languages I learned were Java, C# and
-                  Javascript.
-                </p>
-              </header>
+                <header>
+                    <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                        TaskStarter
+                        <span class="text-position font-bold">| VS Code extension</span>
+                    </h3>
+                </header>
+                <div class="mt-2.1 flex space-y-2 flex-col">
+                    <span>
+                        I've gotten frustrated with Azure DevOps Boards to find the next
+                        task I need to start. So I created a plugin for VSCode to do the
+                        work for me. 😅
+                    </span>
+
+                    <span>
+                        Are you tired of having to go to your Azure DevOps sprint board to
+                        find the task you are supposed to work on just to get the ID of
+                        the task? 😓
+                    </span>
+
+                    <span>
+                        Do
+                        <b>YOU</b>
+                        name your feature branches like this: 🤔
+                    </span>
+
+                    <pre class="bg-terminal-cyan p-3 text-black">
+                        feature/${taskID}-${taskName}
+                    </pre>
+
+                    <span class="mt-4">
+                        Well it
+                        <b>MIGHT</b>
+                        just be your lucky day! 🍀
+                    </span>
+
+                    <span class="font-bold text-lg text-terminal-yellow">
+                        This extension fixes that! 💡
+                    </span>
+
+                    <span>
+                        Now you can start your task from the comfort of your lovely little
+                        memory-hogging vscode "IDE." 💻
+                    </span>
+
+                    <span>
+                        Just use the
+                        <b>"Start new task"</b>
+                        command, and it will display the tasks in the current iteration of
+                        your sprint! 🚀
+                    </span>
+
+                    <span>
+                        Find the task you want to work on and hit enter. It will magically
+                        create a new branch with the correct name for you, no need to
+                        intervene. 🪄
+                    </span>
+
+                    <span>
+                        When you are done with your branch, you simply use the command
+                        <b>"Finish task"</b>
+                        and it even creates A PULL REQUEST and you to it on Azure DevOps!
+                        🙌
+                    </span>
+
+                    <span>
+                        So what are you waiting for?! We are in short supply so get it
+                        while you can! ⏳
+                    </span>
+
+                    <a href="https://github.com/TheSinding/TaskStarter" class="main-link">
+                        Task Starter - Github
+                    </a>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=thesinding.taskstarter"
+                        class="main-link">
+                        Task Starter - VSCode Marketplace
+                    </a>
+                </div>
+                <div class="my-3.2 last:pb-1.5">
+                    <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Typescript
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            VSCode Extensions
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Azure DevOps
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">API</li>
+                    </ul>
+                </div>
             </section>
-          </div>
-
-          <section class="mb-4.5 break-inside-avoid">
-            <header>
-              <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
-                Erhvervsakademiet Lillebælt
-              </h3>
-              <p class="leading-normal text-md text-gray-650">
-                2012 – 2014
-                <span class="text-position font-bold">
-                  | Professional degree - Multimedia Design
-                </span>
-              </p>
-              <p class="leading-normal text-md text-terminal-white">
-                At Multimedia Design I learned a lot about the theory behind
-                great UI and UX.
-                <br />
-                We had courses with the purpose of teaching color theory,
-                composition, what engages with a user and more.
-              </p>
-            </header>
-          </section>
-        </section>
-
-        <section class="mt-8 first:mt-0">
-          <div class="break-inside-avoid">
-            <h2
-              class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal"
-            >
-              # REFERENCES
+            <section class="mb-4.5 break-inside-avoid">
+                <header>
+                    <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                        w830-logger
+                        <span class="text-position font-bold">| Simple project</span>
+                    </h3>
+                </header>
+                <div class="mt-2.1 flex flex-col">
+                    <span>
+                        Simple metrics collector for a Ventus w830 weather station. You
+                        can configure the weather station with the "Ecowitt" API and
+                        custom location, then point it to this server.
+                    </span>
+                    <span>
+                        This server exposes a Prometheus Metrics collection point on
+                        <code>/metrics</code>
+                        which you can use for collecting the data into Prometheus and
+                        Grafana
+                    </span>
+                    <a href="https://github.com/TheSinding/w830-logger" class="main-link">
+                        w830-logger - Github
+                    </a>
+                </div>
+                <div class="my-3.2 last:pb-1.5">
+                    <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+                        <li class="chip bg-terminal-cyan text-terminal-black">MongoDB</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Ecowitt</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Docker</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Prometheus
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Grafana</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div
+            class="p-6 mx-auto page max-w-2xl print:mt-16 print:h-screen print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16">
+            <!-- To keep in the same column -->
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal">
+                # SKILLS
             </h2>
 
             <section class="mb-4.5 break-inside-avoid">
-              <header>
-                <h3
-                  class="text-lg font-bold text-terminal-cyan leading-snugish"
-                >
-                  Professional References
-                </h3>
-              </header>
-              <p class="leading-normal text-md text-terminal-white mt-2.1">
-                Professional references are available upon request.
-                <br />
-                I can provide contacts from current and previous employers,
-                colleagues, and project stakeholders who can speak to my
-                technical abilities, work ethic, and collaborative skills.
-              </p>
-            </section>
-
-            <section class="mb-4.5 break-inside-avoid">
-              <header>
-                <h3
-                  class="text-lg font-bold text-terminal-cyan leading-snugish"
-                >
-                  Portfolio & Code Samples
-                </h3>
-              </header>
-              <p class="leading-normal text-md text-terminal-white mt-2.1">
-                Extensive code samples and project documentation available on:
-              </p>
-              <div class="mt-2.1">
-                <p class="leading-normal text-md main-link">
-                  <a href="https://github.com/TheSinding" class="group">
-                    GitHub Portfolio
-                    <span
-                      class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in"
-                    >
-                      ↗
-                    </span>
-                  </a>
-                  - Open source contributions and personal projects
+                <header>
+                    <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                        JavaScript / TypeScript
+                        <span class="text-position font-bold">| Expert Level</span>
+                    </h3>
+                </header>
+                <p class="mt-2.1">
+                    I have worked with Javascript and Typescript for the last
+                    <span id="js-age"></span>
+                    years and have developed a deep knowledge regarding the languages.
+                    <br />
+                    I have contributed to various open source projects. Mainly the
+                    <a href="https://feathersjs.com/" class="main-link">FeathersJS</a>
+                    project.
+                    <br />
+                    I have made various authentication plugins and helped fix various
+                    bugs and I'm a contributor on the
+                    <a href="https://github.com/feathers-plus/feathers-authentication-management" class="main-link">
+                        Feathers Authentication Management
+                    </a>
+                    project
                 </p>
-                <p class="leading-normal text-md main-link mt-1">
-                  <a href="https://marketplace.visualstudio.com/items?itemName=thesinding.taskstarter" class="group">
-                    VS Code Extension
-                    <span
-                      class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in"
-                    >
-                      ↗
-                    </span>
-                  </a>
-                  - Published TaskStarter extension
-                </p>
-              </div>
+                <div class="my-3.2 last:pb-1.5">
+                    <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+                        <li class="chip bg-terminal-cyan text-terminal-black">ES6</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">React</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Redux</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Vuex</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Vue</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">NestJS</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Functional Programming
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">NodeJS</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            FeathersJS
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Stripe</li>
+                    </ul>
+                </div>
             </section>
-
             <section class="mb-4.5 break-inside-avoid">
-              <header>
-                <h3
-                  class="text-lg font-bold text-terminal-cyan leading-snugish"
-                >
-                  Contact for References
-                </h3>
-              </header>
-              <p class="leading-normal text-md text-terminal-white mt-2.1">
-                Please feel free to reach out via email or LinkedIn to request
-                specific references tailored to the role and responsibilities
-                you're considering me for.
-              </p>
+                <header>
+                    <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                        DevOps
+                        <span class="text-position font-bold">| Advanced Level</span>
+                    </h3>
+                </header>
+                <p class="mt-2.1">
+                    In my time building Pletora's code base, I've used quite a few
+                    DevOps technologies.
+                    <br />
+                    I've built Pletora's stack using Docker, Gitlab Container Registry,
+                    Digital Oceans managed Kubernetes and PostgreSQL, Gitlab CI/CD and
+                    with automated build notifications.
+                    <br />
+                    Errors is automatically sent to Sentry.io which generates reports.
+                </p>
+                <div class="my-3.2 last:pb-1.5">
+                    <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Kubernetes
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Docker Swarm
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Docker</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Gitlab CI/CD
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Travis</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">CI/CD</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Digital Ocean
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Git</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Sentry</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Gitlab Container Registry
+                        </li>
+                    </ul>
+                </div>
             </section>
-          </div>
-        </section>
+            <section class="mb-4.5 break-inside-avoid">
+                <header>
+                    <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                        Linux
+                        <span class="text-position font-bold">| Advanced Level</span>
+                    </h3>
+                </header>
+                <p class="mt-2.1">
+                    I've been using Arch Linux daily for almost 6 years now and have
+                    gained a lot of experience in this field.
+                    <br />
+                    I manage many Linux servers and maintain various software.
+                </p>
+                <div class="my-3.2 last:pb-1.5">
+                    <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+                        <li class="chip bg-terminal-cyan text-terminal-black">Nginx</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Ubuntu Server
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Arch Linux
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            PostgresQL
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="mb-4.5 break-inside-avoid">
+                <header>
+                    <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                        Kubernetes
+                        <span class="text-position font-bold">| Intermediate Level</span>
+                    </h3>
+                </header>
+                <p class="mt-2.1">
+                    I've gained a lot of knowledge while using Kubernetes to deploy
+                    Pletora and Leanheat Monitor, including how to create scalable
+                    deployments and manage containerized applications, Ingress, certificate management and more.
+                </p>
+                <div class="my-3.2 last:pb-1.5">
+                    <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+                        <li class="chip bg-terminal-cyan text-terminal-black">Ingress</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Cert-manager
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">K8s</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Rancher</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Deployments
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="mb-4.5 break-inside-avoid">
+                <header>
+                    <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                        Python
+                        <span class="text-position font-bold">| Intermediate Level</span>
+                    </h3>
+                </header>
+                <p class="mt-2.1">
+                    I've used Python for various small projects, mainly for scripting
+                    and data analysis. Also building small home assistant plugins.
+                </p>
+                <div class="my-3.2 last:pb-1.5">
+                    <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+                        <li class="chip bg-terminal-cyan text-terminal-black">Python</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Homeassistant</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Webscrapers</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Data parsing
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Reverse engineering
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            FastAPI
+                        </li>
 
-        <p>
-          Fork this resume at
-          <a href="https://github.com/TheSinding/sindingdev">Github</a>
-        </p>
-      </div>
+                    </ul>
+                </div>
+            </section>
+            <section class="mb-4.5 break-inside-avoid">
+                <header>
+                    <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                        Embedded Programming
+                        <span class="text-position font-bold">| Intermediate Level</span>
+                    </h3>
+                </header>
+                <p class="mt-2.1">
+                    I enjoy making embedded programming as a hobby and love to use the
+                    ESP32, TI Lauchpad, Arduino and more.
+                    <br />
+                    Here I mainly use the PlatformIO and either C++ or Rust as the
+                    language.
+                </p>
+                <div class="my-3.2 last:pb-1.5">
+                    <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+                        <li class="chip bg-terminal-cyan text-terminal-black">ESP32</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Arduino</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">C++</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            TI Launchpad
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Rust</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">Go</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="mb-4.5 break-inside-avoid">
+                <header>
+                    <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                        Network Administration
+                        <span class="text-position font-bold">| Intermediate Level</span>
+                    </h3>
+                </header>
+                <p class="mt-2.1">
+                    In my time at Coworking Plus I planned and built a networking
+                    infrastructure, currently supporting around 350 people.
+                    <br />
+                    I've gained knowledge of VLANs, WIFI coverage, network management,
+                    multi-ip setups and more.
+                </p>
+                <div class="my-3.2 last:pb-1.5">
+                    <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Ubiquiti Unifi
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">VLAN</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Switching
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Firewall
+                        </li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">WIFI</li>
+                        <li class="chip bg-terminal-cyan text-terminal-black">
+                            Network management
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div
+            class="p-6 mx-auto page max-w-2xl print:mt-16 print:h-screen print:max-w-a4 md:max-w-a4 md:h-full xsm:p-8 sm:p-9 md:p-16">
+            <!-- To keep in the same column -->
 
-      <!-- end Page -->
+            <section class="mt-8 first:mt-0">
+                <div class="break-inside-avoid">
+                    <h2 class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal">
+                        # EDUCATION
+                    </h2>
+
+                    <section class="mb-4.5 break-inside-avoid">
+                        <header>
+                            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                                University Of Southern Denmark
+                            </h3>
+                            <p class="leading-normal text-md text-gray-650">
+                                2016 – 2020
+                                <span class="text-position font-bold">
+                                    | BEng in Software Technology Engineering
+                                </span>
+                            </p>
+                            <p class="leading-normal text-md text-terminal-white">
+                                At SDU I learned how to approach a software project as a
+                                Software Engineer. I learned a lot of the methods and tools
+                                used, like UML, MoSCoW, Requirements, software maintenance and
+                                more.
+                                <br />
+                                Most importantly I learned how to work as a team and how to
+                                delegate tasks.
+                                <br />
+                                The programming languages I learned were Java, C# and
+                                Javascript.
+                            </p>
+                        </header>
+                    </section>
+                </div>
+
+                <section class="mb-4.5 break-inside-avoid">
+                    <header>
+                        <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                            Erhvervsakademiet Lillebælt
+                        </h3>
+                        <p class="leading-normal text-md text-gray-650">
+                            2012 – 2014
+                            <span class="text-position font-bold">
+                                | Professional degree - Multimedia Design
+                            </span>
+                        </p>
+                        <p class="leading-normal text-md text-terminal-white">
+                            At Multimedia Design I learned a lot about the theory behind
+                            great UI and UX.
+                            <br />
+                            We had courses with the purpose of teaching color theory,
+                            composition, what engages with a user and more.
+                        </p>
+                    </header>
+                </section>
+            </section>
+
+            <section class="mt-8 first:mt-0">
+                <div class="break-inside-avoid">
+                    <h2 class="mb-4 font-bold tracking-widest text-sm2 text-terminal-yellow italic print:font-normal">
+                        # REFERENCES
+                    </h2>
+
+                    <section class="mb-4.5 break-inside-avoid">
+                        <header>
+                            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                                Professional References
+                            </h3>
+                        </header>
+                        <p class="leading-normal text-md text-terminal-white mt-2.1">
+                            Professional references are available upon request.
+                            <br />
+                            I can provide contacts from current and previous employers,
+                            colleagues, and project stakeholders who can speak to my
+                            technical abilities, work ethic, and collaborative skills.
+                        </p>
+                    </section>
+
+                    <section class="mb-4.5 break-inside-avoid">
+                        <header>
+                            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                                Portfolio & Code Samples
+                            </h3>
+                        </header>
+                        <p class="leading-normal text-md text-terminal-white mt-2.1">
+                            Extensive code samples and project documentation available on:
+                        </p>
+                        <div class="mt-2.1">
+                            <p class="leading-normal text-md main-link">
+                                <a href="https://github.com/TheSinding" class="group">
+                                    GitHub Portfolio
+                                    <span
+                                        class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in">
+                                        ↗
+                                    </span>
+                                </a>
+                                - Open source contributions and personal projects
+                            </p>
+                            <p class="leading-normal text-md main-link mt-1">
+                                <a href="https://marketplace.visualstudio.com/items?itemName=thesinding.taskstarter"
+                                    class="group">
+                                    VS Code Extension
+                                    <span
+                                        class="inline-block text-terminal-green print:text-black font-normal group-hover:text-terminal-white transition duration-100 ease-in">
+                                        ↗
+                                    </span>
+                                </a>
+                                - Published TaskStarter extension
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="mb-4.5 break-inside-avoid">
+                        <header>
+                            <h3 class="text-lg font-bold text-terminal-cyan leading-snugish">
+                                Contact for References
+                            </h3>
+                        </header>
+                        <p class="leading-normal text-md text-terminal-white mt-2.1">
+                            Please feel free to reach out via email or LinkedIn to request
+                            specific references tailored to the role and responsibilities
+                            you're considering me for.
+                        </p>
+                    </section>
+                </div>
+            </section>
+
+            <p>
+                Fork this resume at
+                <a href="https://github.com/TheSinding/sindingdev">Github</a>
+            </p>
+        </div>
+
+        <!-- end Page -->
     </main>
-  </body>
+</body>
+
 </html>
